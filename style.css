@@ -1,0 +1,264 @@
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+::selection {
+  color:#212426;
+  background: #09C4ED;
+}
+
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(255,255,255,0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #09C4ED;
+}
+
+body {
+  margin: 0;
+	-webkit-overflow-scrolling: touch;
+	overflow-x: hidden;
+	min-width: 300px;
+	color:#fff;
+  background: linear-gradient(164.44deg, #25CDF2 6.44%, #0C86DF 23.88%, #1A3C7E 42.71%, #000A16 62.12%);
+  font-family: "Karla";
+}
+main {
+	width: 1680px;
+	margin: 0 auto;
+	padding-top: 0px;
+}
+
+/*==============Header==============*/
+header {
+  width: 1680px;
+  margin: 20px auto 0;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#headerLogo {
+  width: 103px;
+  height: 31px;
+  display: block;
+  background: url(img/Swell-logo.svg);
+  background-size: contain;
+  transition:.2s;
+}
+#headerMenu{
+  display: flex;
+}
+.menuItem {
+  margin-left: 50px;
+}
+
+/*==============firstScreen==============*/
+#firstScreen {
+  /*height: calc(100vh - 51px);*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#orb {
+  width: 616px;
+  height: 624px;
+  background: url(img/orb.svg);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#topHeader {
+  font: normal 600 120px "Nunito";
+  position: absolute;
+  width: 831px;
+  text-align: center;
+}
+.topDesc {
+  font: 400 28px "Karla";
+  line-height: 43px;
+  text-align: center;
+  width: 824px;
+  margin-top: 127px;
+}
+
+/*==============SERVICES==============*/
+#serv {
+  margin-top: 186px;
+  display: flex;
+  justify-content: space-between;
+}
+.servWrap {
+  display: flex;
+}
+.servWrapHeaderDes {
+  width: 117px;
+  font: 800 20px "Nunito";
+  line-height: 35px;
+}
+.servWrapHeaderDev {
+  width: 170px;
+  font: 800 20px "Nunito";
+  line-height: 35px;
+}
+.servWrapHeader3D {
+  width: 160px;
+  font: 800 20px "Nunito";
+  line-height: 35px;
+}
+.servWrapListItem {
+  font: 400 24px "Karla";
+  line-height: 48px;
+}
+.linkTo3D {
+  margin: 35px 17px 0 17px;
+  font: italic 600 20px "Nunito";
+  line-height: 35px;
+}
+
+/*==============CLIENTS==============*/
+#clients {
+  margin-top: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clientsTopHeader {
+  font: 600 91px "Nunito";
+  line-height: 174px;
+  text-align: center;
+}
+.clientsTopDesc {
+  font: 400 20px "Karla";
+  line-height: 30px;
+  text-align: center;
+  width: 824px;
+}
+.clientsList {
+  margin-top: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clientsListItem {
+  margin-left: 25px;
+}
+.clientsListItem1 {
+  background: url(img/Client1_logo_TollBrothers.svg);
+  background-size: contain;
+  width: 147px;
+  height: 60px;
+}
+.clientsListItem2 {
+  background: url(img/Client2_logo_PerkinsWill.svg);
+  background-size: contain;
+  width: 147px;
+  height: 50px;
+}
+.clientsListItem3 {
+  background: url(img/Client3_logo_AGA.svg);
+  background-size: contain;
+  width: 147px;
+  height: 50px;
+}
+.clientsListItem4 {
+  background: url(img/Client4_logo_TheCaseFoundation.svg);
+  background-size: contain;
+  width: 147px;
+  height: 60px;
+}
+.clientsListItem5 {
+  background: url(img/Client5_logo_Nokia.svg);
+  background-size: contain;
+  width: 147px;
+  height: 60px;
+}
+.clientsListItem6 {
+  background: url(img/Client6_logo_Matterport.svg);
+  background-size: contain;
+  width: 147px;
+  height: 60px;
+}
+.clientsListItem7 {
+  background: url(img/Client7_logo_ProperCloth.svg);
+  background-size: contain;
+  width: 147px;
+  height: 60px;
+}
+
+/*==============WORKS==============*/
+#works {
+  margin-top: 153px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.worksTopDesc {
+  font: 400 20px "Karla";
+  line-height: 30px;
+  text-align: center;
+  width: 514px;
+}
+.worksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.worksContainerWrap {
+margin: 53px 0 40px;
+}
+.worksWrapImg {
+width: 390px;
+height: 244px;
+}
+.worksWrapImg1 {
+  background: url(img/Work1.jpg);
+  background-size: cover;
+}
+.worksWrapImg2 {
+  background: url(img/Work2.jpg);
+  background-size: cover;
+}
+.worksWrapImg3 {
+  background: url(img/Work3.jpg);
+  background-size: cover;
+}
+.worksWrapImg4 {
+  background: url(img/Work4.jpg);
+  background-size: cover;
+}
+.worksWrapImg5 {
+  background: url(img/Work5.jpg);
+  background-size: cover;
+}
+.worksWrapImg6 {
+  background: url(img/Work6.jpg);
+  background-size: cover;
+}
+.worksWrapImg7 {
+  background: url(img/Work7.jpg);
+  background-size: cover;
+}
+.worksWrapImg8 {
+  background: url(img/Work8.jpg);
+  background-size: cover;
+}
+.worksWrapDesc {
+  margin-top: 19px;
+}
+.worksWrapDesc h3 {
+  font: 400 24px "Karla";
+}
+.worksWrapDesc p {
+  margin-top: 5px;
+  font: 400 16px "Karla";
+}
