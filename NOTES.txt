@@ -1,0 +1,13 @@
+Form js:
+
+function copyContent () {
+    document.getElementById("hiddenTextarea").value =  
+        document.getElementById("myContentEditable").innerHTML;
+    return true;
+}
+
+
+<form action='whatever' onsubmit='return copyContent()'>...
+
+
+http://imulus.github.io/retinajs/

@@ -1,46 +1,169 @@
-html, html a {
-    -webkit-font-smoothing: antialiased;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+/*---------========================================================GENERAL========================================================---------*/
+
+* {
+  transition-duration: .2s;
 }
+html, html a {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+/*==============Selection==============*/
 ::selection {
-  color:#212426;
+  color: #212426;
   background: #09C4ED;
 }
-
-
 body::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
-
 body::-webkit-scrollbar-track {
-    background-color: rgba(255,255,255,0);
+  background-color: rgba(255, 255, 255, 0);
 }
-
 body::-webkit-scrollbar-thumb {
   background-color: #09C4ED;
 }
 
+
 body {
   margin: 0;
-	-webkit-overflow-scrolling: touch;
-	overflow-x: hidden;
-	min-width: 300px;
-	color:#fff;
-  background: linear-gradient(164.44deg, #25CDF2 6.44%, #0C86DF 23.88%, #1A3C7E 42.71%, #000A16 62.12%);
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  min-width: 320px;
+  color: #fff;
   font-family: "Karla";
 }
-main {
-	width: 1680px;
-	margin: 0 auto;
-	padding-top: 0px;
+#bodySection {
+  background: linear-gradient(164.44deg, #25CDF2 6.44%, #0C86DF 23.88%, #1A3C7E 42.71%, #000A16 62.12%);
 }
-
-/*==============Header==============*/
+#bodySection[footerUnderPage="on"] {
+  margin-bottom: 161px;
+  padding-bottom: 125px;
+  position: relative;
+  z-index: 1;
+}
+.mobileMenu {
+  display: none;
+}
+main {
+  width: 1680px;
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding-top: 0px;
+}
 header {
   width: 1680px;
-  margin: 20px auto 0;
+  overflow-x: hidden;
+  margin: 0 auto;
 }
+
+@media screen and (max-width: 1919px) {
+  header {
+    width: 1280px;
+  }
+  main {
+    width: 1280px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  header {
+    width: 1000px;
+  }
+  main {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1079px) {
+  header {
+    width: 520px;
+  }
+  main {
+    width: 520px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  header {
+    width: 280px;
+    height: 55px;
+  }
+  main {
+    width: 280px;
+  }
+  /*==============mobileMenu==============*/
+  #header[onMobileMenu="on"] {
+    position: fixed;
+    z-index: 999;
+    width: 280px
+  }
+  .mobileMenu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .5s;
+  }
+  #firstScreen * {
+    transition: .5s;
+  }
+  .mobileMenu[visibility="off"] {
+    z-index: -1;
+    opacity: 0;
+  }
+  .mobileMenu[visibility="on"] {
+    z-index: 99;
+    opacity: 1;
+  }
+  .mobileMenuContainer {
+    height: calc(100vh - 218px);
+    margin: 85px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .mobileMenuItem {
+    font: normal 700 60px "Nunito";
+  }
+  .mobileMenuFooter {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobileMenuContacts {
+    display: flex;
+    width: 270px;
+    justify-content: space-between;
+    font: 400 14px "Karla";
+  }
+  .mobileMenuSocials {
+    width: 245px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    font: 400 14px "Karla";
+  }
+  /*==============End-mobileMenu==============*/
+}
+
+/*---------========================================================END<-GENERAL->END========================================================---------*/
+
+
+
+
+
+
+
+
+
+/*---------========================================================HEADER========================================================---------*/
+
 #header {
+  margin: 30px auto 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,18 +174,207 @@ header {
   display: block;
   background: url(img/Swell-logo.svg);
   background-size: contain;
-  transition:.2s;
+  background-repeat: no-repeat;
+  transition: .2s;
 }
-#headerMenu{
+#headerMenu {
   display: flex;
+  align-self: flex-start;
 }
 .menuItem {
   margin-left: 50px;
+  font: 400 20px "Karla";
+}
+#burgerLines {
+  display: none;
 }
 
+@media screen and (max-width: 1439px) {
+  #header {
+    margin: 40px auto 0;
+  }
+}
+
+@media screen and (max-width: 1079px) {
+  #header {
+    margin: 35px auto 0;
+  }
+  #headerLogo {
+    width: 77px;
+    height: 25px;
+  }
+  #headerMenu {
+    align-self: center;
+  }
+  .menuItem {
+    margin-left: 35px;
+    font: 400 18px "Karla";
+  }
+}
+
+@media screen and (max-width: 599px) {
+  #header {
+    margin: 30px auto 0;
+    position: relative;
+    overflow: hidden;
+  }
+  #headerMenu li {
+    display: none;
+  }
+  #burgerLines {
+    display: block;
+    z-index: 999;
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
+  #burgerLines[cross="on"] {
+    top: 3px;
+    width: 25px;
+  }
+  #burgerLines[cross="on"] #burgerLine1 {
+    width: 29.5926px;
+    transform: translate(3.03906px) scale(1.00254, 0.99745) rotate(45deg);
+  }
+  #burgerLines[cross="on"] #burgerLine2 {
+    opacity: 0;
+  }
+  #burgerLines[cross="on"] #burgerLine3 {
+    width: 29.5926px;
+    transform: translate(1px, 20.8711px) scale(1.00254, 0.99745) rotate(-45deg);
+  }
+}
+
+/*---------========================================================END<-HEADER->END========================================================---------*/
+
+
+
+
+
+
+
+
+
+/*---------========================================================FOOTER========================================================---------*/
+footer {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+#footer {
+  width: 1680px;
+  margin: 123px auto 27px;
+  display: flex;
+  align-items: center;
+}
+.footerSocialsContainer, .footerMenuContainer, .copyrights {
+  flex: 1;
+  display: flex;
+}
+.footerSocialsContainer {
+  justify-content: center;
+}
+.copyrights {
+  font: 400 18px "Karla";
+  line-height: 29px;
+}
+#footerSocials, #footerMenu {
+  display: flex;
+}
+#footerMenu {
+  margin-left: auto;
+}
+.socialsItem, .footerMenuItem {
+  margin-left: 25px;
+  font: 400 18px "Karla";
+  line-height: 29px;
+}
+.socialsItem:first-child {
+  margin-left: 0px;
+}
+footer[footerUnderPage="on"] {
+  width: 100%;
+  position: fixed;
+  color: #111;
+  z-index: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 1919px) {
+  #footer {
+    width: 1280px;
+    margin: 90px auto 42px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  #footer {
+    width: 1000px;
+    margin: 90px auto 42px;
+  }
+  .footerSocialsContainer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1079px) {
+  #footer {
+    width: 520px;
+    margin: 110px auto 30px;
+  }
+  .copyrights {
+    font: 400 16px "Karla";
+    line-height: 26px;
+    flex: 2;
+  }
+  .socialsItem, .footerMenuItem {
+    margin-left: 25px;
+    font: 400 16px "Karla";
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  #footer {
+    flex-wrap: wrap;
+    width: 280px;
+    margin: 55px auto 30px;
+  }
+  .footerSocialsContainer {
+    display: flex;
+    flex: 4;
+    order: -1;
+  }
+  .copyrights {
+    flex: 2;
+  }
+  .footerMenuContainer {
+    flex: 2;
+  }
+  #footerSocials {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 31px;
+  }
+}
+
+/*---------========================================================END<-FOOTER->END========================================================---------*/
+
+
+
+
+
+
+
+
+
+/*---------========================================================HOME-PAGE========================================================---------*/
+
 /*==============firstScreen==============*/
+
 #firstScreen {
   /*height: calc(100vh - 51px);*/
+  margin-top: 130px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,15 +384,25 @@ header {
   width: 616px;
   height: 624px;
   background: url(img/orb.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+#orb:before {
+  content: "Full-Stack";
+  display: block;
+  position: absolute;
+  top: -43px;
+  font: italic 700 20px "Karla";
+  line-height: 30px;
 }
 #topHeader {
-  font: normal 600 120px "Nunito";
+  font: normal 700 120px "Nunito";
   position: absolute;
-  width: 831px;
   text-align: center;
 }
 .topDesc {
@@ -88,10 +410,11 @@ header {
   line-height: 43px;
   text-align: center;
   width: 824px;
-  margin-top: 127px;
+  margin-top: 120px;
 }
 
 /*==============SERVICES==============*/
+
 #serv {
   margin-top: 186px;
   display: flex;
@@ -119,25 +442,35 @@ header {
   font: 400 24px "Karla";
   line-height: 48px;
 }
-.linkTo3D {
-  margin: 35px 17px 0 17px;
+.servWrapListItem.linkTo3D {
+  margin: 35px 0 0 17px;
   font: italic 600 20px "Nunito";
   line-height: 35px;
 }
+.servWrapListItem.linkTo3D a {
+  display: flex;
+  align-items: center;
+}
+.servWrapListItem.linkTo3D a::after {
+  display: block;
+  content: url(img/3d-arrow-right.svg);
+  margin: 1px 0 0 9px;
+}
 
 /*==============CLIENTS==============*/
+
 #clients {
-  margin-top: 190px;
+  margin-top: 216px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.clientsTopHeader {
-  font: 600 91px "Nunito";
-  line-height: 174px;
+.blockTopHeader {
+  font: 700 91px "Nunito";
   text-align: center;
 }
-.clientsTopDesc {
+.blockTopDesc {
+  margin-top: 3px;
   font: 400 20px "Karla";
   line-height: 30px;
   text-align: center;
@@ -155,58 +488,60 @@ header {
 .clientsListItem1 {
   background: url(img/Client1_logo_TollBrothers.svg);
   background-size: contain;
+  background-repeat: no-repeat;
   width: 147px;
   height: 60px;
 }
 .clientsListItem2 {
   background: url(img/Client2_logo_PerkinsWill.svg);
   background-size: contain;
+  background-repeat: no-repeat;
   width: 147px;
   height: 50px;
 }
 .clientsListItem3 {
   background: url(img/Client3_logo_AGA.svg);
   background-size: contain;
+  background-repeat: no-repeat;
   width: 147px;
   height: 50px;
 }
 .clientsListItem4 {
   background: url(img/Client4_logo_TheCaseFoundation.svg);
   background-size: contain;
+  background-repeat: no-repeat;
   width: 147px;
   height: 60px;
 }
 .clientsListItem5 {
   background: url(img/Client5_logo_Nokia.svg);
   background-size: contain;
+  background-repeat: no-repeat;
   width: 147px;
   height: 60px;
 }
 .clientsListItem6 {
   background: url(img/Client6_logo_Matterport.svg);
   background-size: contain;
+  background-repeat: no-repeat;
   width: 147px;
   height: 60px;
 }
 .clientsListItem7 {
   background: url(img/Client7_logo_ProperCloth.svg);
   background-size: contain;
+  background-repeat: no-repeat;
   width: 147px;
   height: 60px;
 }
 
 /*==============WORKS==============*/
+
 #works {
   margin-top: 153px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.worksTopDesc {
-  font: 400 20px "Karla";
-  line-height: 30px;
-  text-align: center;
-  width: 514px;
 }
 .worksContainer {
   display: flex;
@@ -214,11 +549,12 @@ header {
   justify-content: space-between;
 }
 .worksContainerWrap {
-margin: 53px 0 40px;
+  margin: 53px 0 40px;
+  width: 390px;
 }
 .worksWrapImg {
-width: 390px;
-height: 244px;
+  width: 390px;
+  height: 244px;
 }
 .worksWrapImg1 {
   background: url(img/Work1.jpg);
@@ -262,3 +598,789 @@ height: 244px;
   margin-top: 5px;
   font: 400 16px "Karla";
 }
+.worksLoadMore {
+  margin-top: 66px;
+}
+#worksLoadMoreButton {
+  width: 170px;
+  height: 58px;
+  border: 1px solid #FFFFFF;
+  border-radius: 15px;
+  box-sizing: border-box;
+  font: 400 20px "Karla";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s;
+}
+#worksLoadMoreButton:hover {
+  background: #FFFFFF;
+  color: #000915;
+}
+
+/*==============CONTACTS==============*/
+
+#contacts {
+  margin-top: 159px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactsTopDesc {
+  display: none;
+}
+.contactsContainer {
+  margin-top: 215px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contactsWrap {
+  position: relative;
+}
+
+/*==============CONTACTS-WrapPhoto==============*/
+
+.contactsWrapPhoto {
+  margin-right: 52px;
+}
+.contactsPhotoImg {
+  width: 378px;
+  height: 394px;
+  background: url(img/DylanHawkins.jpg);
+  background-size: cover;
+  border-radius: 300px;
+}
+
+/*==============CONTACTS-WrapAbout==============*/
+
+.contactsWrapAbout {
+  width: 631px;
+  margin-right: 229px;
+}
+.contactsWrapTitle {
+  position: absolute;
+  top: -113px;
+  font: italic 700 24px "Nunito";
+  line-height: 43px;
+}
+.contactsDylanName {
+  font: 600 40px "Nunito";
+  line-height: 52px;
+  display: flex;
+  align-items: flex-end;
+}
+.contactsDylanName::after {
+  display: block;
+  content: attr(position);
+  font: 400 20px "Karla";
+  margin: 0 0 9px 171px;
+}
+.contactsDylanDescr {
+  margin-top: 49px;
+  min-height: 267px;
+  font: 400 28px "Karla";
+  line-height: 43px;
+}
+.contactsAboutCTAContainer {
+  display: flex;
+  margin-top: 58px;
+}
+.contactsAboutCTA1 {
+  width: 446px;
+}
+.contactsAboutCTATitle {
+  font: 600 24px "Nunito";
+  line-height: 28px;
+}
+.contactsAboutCTADesc {
+  margin-top: 22px;
+  font: 400 20px "Karla";
+  line-height: 33px;
+}
+
+/*==============CONTACTS-WrapForm==============*/
+
+.contactsWrapForm {
+  width: 390px;
+  height: 603px;
+}
+.contactsFormWrap {
+  margin-bottom: 45px;
+}
+.contactsInputLabel {
+  width: 120px;
+  margin-right: 18px;
+  float: left;
+  font: 800 24px "Nunito";
+}
+.contactsInput {
+  width: 251px;
+  padding-top: 3px;
+  font: 400 20px "Karla";
+  line-height: 33px;
+  color: #fff;
+  background-color: transparent;
+  border: 0px solid;
+  box-sizing: border-box;
+}
+.contactsTextArea {
+  min-height: 33px;
+  max-height: 207px;
+  /* margin: 0 0 0 138px; */
+  padding-right: 6px;
+  overflow-y: scroll;
+}
+.contactsTextArea::-webkit-scrollbar {
+  width: 3px;
+}
+.contactsTextArea::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.contactsTextArea::-webkit-scrollbar-thumb {
+  background-color: #09C4ED;
+}
+.contactsTextArea:before {
+  opacity: 0.5;
+}
+.contactsHiddenTextArea {
+  display: none;
+}
+
+/*==============ТВОРИМ ХЕРНЮ==============*/
+
+@keyframes lineInserted {
+  from {
+    height: 0;
+  }
+  to {
+    height: 33px;
+  }
+}
+div[contenteditable]>div {
+  animation-duration: .2s;
+  animation-name: lineInserted;
+}
+.contactsTextArea:focus {
+  /*border: 1px solid #FFFFFF;
+  border-radius: 15px;
+  /* padding: 6px !important; */
+  margin: 0;
+  width: 390px;
+}
+
+/*==============ТВОРИМ ХЕРНЮ==============*/
+
+#contactsFormButton {
+  width: 390px;
+  height: 58px;
+  margin-top: 35px;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 15px;
+  font: 400 20px "Karla";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+  transition: .2s;
+}
+#contactsFormButton:hover {
+  background: #FFFFFF;
+  color: #000915;
+}
+
+/*================================Media--<1920px================================*/
+
+@media screen and (max-width: 1919px) {
+  /*==============firstScreen==============*/
+  #firstScreen {
+    /*height: calc(100vh - 51px);*/
+    margin-top: 120px;
+  }
+  #orb {
+    width: 510px;
+    height: 516px;
+  }
+  #topHeader {
+    font: normal 700 91px "Nunito";
+    width: 640px;
+  }
+  .topDesc {
+    margin-top: 70px;
+  }
+  /*==============SERVICES==============*/
+  #serv {
+    margin-top: 230px;
+  }
+  .servWrapHeader3D {
+    width: 165px;
+  }
+  .servWrapListItem {
+    font: 400 20px "Karla";
+    line-height: 40px;
+  }
+  .servWrapListItem.linkTo3D {
+    margin: 35px 0 0 -18px;
+  }
+  /*==============CLIENTS==============*/
+  #clients {
+    margin-top: 190px;
+  }
+  .clientsList {
+    margin-top: 52px;
+  }
+  /*==============WORKS==============*/
+  #works {
+    margin-top: 133px;
+  }
+  .worksContainerWrap {
+    margin: 55px 0 35px;
+    width: 400px;
+  }
+  .worksWrapImg {
+    width: 400px;
+  }
+  .worksWrapDesc {
+    margin-left: 24px;
+  }
+  .worksWrapDesc h3 {
+    font: 400 20px "Karla";
+  }
+  /* ВРЕМЕННЫЙ ФИКС - УБИРАЕМ ПОСЛЕДНИЕ 2 РаБОТЫ */
+  .worksContainerWrap:nth-last-child(1), .worksContainerWrap:nth-last-child(2) {
+    display: none;
+  }
+  /*==============CONTACTS==============*/
+  #contacts {
+    margin-top: 167px;
+  }
+  .contactsTopDesc {
+    display: block;
+  }
+  .contactsContainer {
+    margin-top: 91px;
+  }
+  /*==============CONTACTS-WrapPhoto==============*/
+  .contactsWrapPhoto {
+    margin: 0 56px 0 auto;
+  }
+  .contactsPhotoImg {
+    width: 399px;
+    height: 416px;
+  }
+  /*==============CONTACTS-WrapAbout==============*/
+  .contactsWrapAbout {
+    margin-right: auto;
+  }
+  .contactsWrapAbout .contactsWrapTitle {
+    display: none;
+  }
+  .contactsAboutCTA1 {
+    width: 326px;
+  }
+  /*==============CONTACTS-WrapForm==============*/
+  .contactsWrapForm {
+    width: 880px;
+    height: auto;
+    margin: 268px auto 0;
+  }
+  .contactsWrapForm .contactsWrapTitle {
+    width: 100%;
+    text-align: center;
+  }
+  .contactsFormWrap {
+    margin-bottom: 35px;
+  }
+  .contactsFormWrap:last-child {
+    margin-bottom: 0px;
+  }
+  #contactsForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 216px;
+  }
+  .contactsInputLabel {
+    margin-right: 27px;
+  }
+  .contactsInput {
+    width: 302px;
+  }
+  .contactsTextArea {
+    max-height: 195px;
+    /* margin-left: 147px; */
+  }
+  /* Херня */
+  .contactsTextArea:focus {
+    /*border: 1px solid #FFFFFF;
+  border-radius: 15px;
+  /* padding: 6px !important; */
+    /* margin-left: 147px; */
+    width: 302px;
+  }
+  /* Херня */
+  .contactsFormButtonContainer {
+    display: flex;
+    justify-content: center;
+  }
+  #contactsFormButton {
+    margin-top: 7px;
+    width: 180px;
+  }
+}
+
+/*================================END-Media--<1920px================================*/
+
+/*================================Media--<1440px================================*/
+
+@media screen and (max-width: 1439px) {
+  /*==============firstScreen==============*/
+  #firstScreen {
+    margin-top: 110px;
+  }
+  #orb {
+    width: 450px;
+    height: 456px;
+  }
+  .topDesc {
+    width: 560px;
+    margin-top: 193px;
+  }
+  /*==============SERVICES==============*/
+  #serv {
+    margin-top: 157px;
+  }
+  .servWrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .servWrapHeader3D, .servWrapHeaderDes, .servWrapHeaderDev {
+    margin-bottom: 15px;
+  }
+  .servWrapListItem {
+    font: 400 18px "Karla";
+    line-height: 36px;
+  }
+  .servWrapListItem.linkTo3D {
+    margin: 15px 0 0 -18px;
+  }
+  /*==============CLIENTS==============*/
+  #clients {
+    margin-top: 120px;
+  }
+  .clientsList {
+    margin-top: 19px;
+    flex-wrap: wrap;
+    width: 700px;
+  }
+  .clientsListItem {
+    margin-top: 40px;
+  }
+  /*==============WORKS==============*/
+  #works {
+    margin-top: 156px;
+  }
+  .worksContainerWrap {
+    margin: 63px 0 15px;
+    width: 480px;
+  }
+  .worksWrapImg {
+    width: 480px;
+    height: 292px;
+  }
+  .worksWrapDesc {
+    margin-top: 28px;
+    margin-left: 37px;
+  }
+  .worksLoadMore {
+    margin-top: 78px;
+  }
+  /*==============CONTACTS==============*/
+  #contacts {
+    margin-top: 122px;
+  }
+  .contactsContainer {
+    margin-top: 118px;
+  }
+  /*==============CONTACTS-WrapPhoto==============*/
+  .contactsWrapPhoto {
+    margin-right: 38px;
+  }
+  .contactsPhotoImg {
+    width: 377px;
+    height: 393px;
+  }
+  /*==============CONTACTS-WrapAbout==============*/
+  .contactsWrapAbout {
+    width: 585px;
+  }
+  .contactsAboutCTAContainer {
+    margin-top: 39px;
+  }
+  .contactsAboutCTA1 {
+    width: 325px;
+  }
+  /*==============CONTACTS-WrapForm==============*/
+  .contactsFormWrap {
+    margin-bottom: 40px;
+  }
+  #contactsForm {
+    height: 231px;
+  }
+  #contactsFormButton {
+    margin-top: 4px;
+  }
+}
+
+/*================================End-Media--<1440px================================*/
+
+/*================================Media--<1080px================================*/
+
+@media screen and (max-width: 1079px) {
+  /*==============firstScreen==============*/
+  #orb {
+    width: 316px;
+    height: 320px;
+  }
+  #orb:before {
+    top: -35px;
+  }
+  #topHeader {
+    font: normal 700 60px "Nunito";
+  }
+  .topDesc {
+    width: 466px;
+    margin-top: 70px;
+    font: 400 24px "Karla";
+    line-height: 36px;
+  }
+  /*==============SERVICES==============*/
+  #serv {
+    margin-top: 136px;
+    flex-wrap: wrap;
+  }
+  .servWrapHeader3D {
+    width: 100%;
+  }
+  .servWrap:nth-child(2) {
+    margin: 50px auto 0;
+    order: 1;
+    align-items: center;
+    text-align: center;
+  }
+  .servWrap:last-child {
+    text-align: right;
+  }
+  .servWrapListItem {
+    font: 400 18px "Karla";
+    line-height: 36px;
+  }
+  .servWrapListItem.linkTo3D {
+    margin: 35px 0 0 0;
+  }
+  /*==============CLIENTS==============*/
+  #clients {
+    margin-top: 120px;
+  }
+  .blockTopHeader {
+    font: 700 60px "Nunito";
+  }
+  .blockTopDesc {
+    margin-top: 5px;
+    font: 400 18px "Karla";
+  }
+  .clientsList {
+    margin-top: 41px;
+    width: 520px;
+  }
+  .clientsListItem {
+    margin-top: 29px;
+  }
+  /*==============WORKS==============*/
+  #works {
+    margin-top: 113px;
+  }
+  .worksContainerWrap {
+    margin: 35px 0 15px;
+    width: 520px;
+  }
+  .worksWrapImg {
+    width: 520px;
+    height: 317px;
+  }
+  .worksWrapDesc {
+    margin-top: 18px;
+    margin-left: 31px;
+  }
+  .worksWrapDesc h3 {
+    font: 400 18px "Karla";
+  }
+  .worksWrapDesc p {
+    font: 400 14px "Karla";
+    line-height: 21px;
+  }
+  .worksLoadMore {
+    margin-top: 50px;
+  }
+  #worksLoadMoreButton {
+    font: 400 18px "Karla";
+    width: 140px;
+    height: 45px;
+  }
+  /*==============CONTACTS==============*/
+  #contacts {
+    margin-top: 115px;
+  }
+  .contactsContainer {
+    margin-top: 62px;
+  }
+  /*==============CONTACTS-WrapPhoto==============*/
+  .contactsWrapPhoto {
+    margin: 0 auto;
+  }
+  /*==============CONTACTS-WrapAbout==============*/
+  .contactsWrapAbout {
+    width: 520px;
+    display: flex;
+    flex-direction: column;
+    margin: 21px auto 0;
+    align-items: center;
+  }
+  .contactsDylanName {
+    width: 377px;
+  }
+  .contactsDylanName::after {
+    margin: 0 20px 9px 46px;
+  }
+  .contactsDylanDescr {
+    width: 483px;
+  }
+  .contactsAboutCTAContainer {
+    margin-top: 80px;
+    width: 520px;
+  }
+  .contactsAboutCTA1 {
+    width: auto;
+    margin-right: auto;
+  }
+  .contactsAboutCTA2 {
+    text-align: right;
+  }
+  /*==============CONTACTS-WrapForm==============*/
+  .contactsWrapForm {
+    width: auto;
+    margin: 230px auto 0;
+  }
+  .contactsWrapTitle {
+    top: -110px;
+  }
+  .contactsFormWrap {
+    margin-bottom: 42px;
+  }
+  #contactsForm {
+    height: auto;
+  }
+  .contactsInputLabel {
+    margin-right: 60px;
+  }
+  .contactsInput {
+    width: 234px;
+  }
+  .contactsTextArea {
+    max-height: 230px;
+  }
+  .contactsTextArea:focus {
+    width: 234px;
+  }
+  #contactsFormButton {
+    margin-top: 40px;
+    width: 140px;
+    height: 45px;
+    font: 400 18px "Karla";
+  }
+}
+/*================================End-Media--<1080px================================*/
+
+/*================================Media--<600px================================*/
+@media screen and (max-width: 599px) {
+  /*==============firstScreen==============*/
+  #firstScreen {
+    margin-top: 125px;
+  }
+  #orb {
+    width: 212px;
+    height: 214px;
+  }
+  #orb:before {
+    font: italic 700 16px "Karla";
+  }
+  #topHeader {
+    font: normal 700 35px "Nunito";
+  }
+  .topDesc {
+    width: 280px;
+    margin-top: 65px;
+    font: 400 20px "Karla";
+    line-height: 30px;
+  }
+  /*==============SERVICES==============*/
+  #serv {
+    margin-top: 85px;
+  }
+  #serv .servWrap {
+    margin: 75px auto 0;
+    order: 0;
+    align-items: center;
+    text-align: center;
+  }
+  #serv .servWrap:first-child {
+    margin: 0 auto;
+  }
+  .servWrapListItem {
+    font: 400 16px "Karla";
+    line-height: 32px;
+  }
+  .servWrapListItem.linkTo3D {
+    margin: 75px 0 0 0;
+    font: italic 600 18px "Nunito";
+  }
+  /*==============CLIENTS==============*/
+  #clients {
+    margin-top: 170px;
+  }
+  .blockTopHeader {
+    font: 700 35px "Nunito";
+  }
+  .blockTopDesc {
+    font: 400 16px "Karla";
+  }
+  .clientsList {
+    margin-top: 12px;
+    width: 280px;
+    justify-content: space-between;
+  }
+  .clientsListItem {
+    margin: 36px 0 0 0;
+    width: 130px;
+  }
+  .clientsListItem:last-child {
+    margin: 24px auto 0;
+  }
+  /*==============WORKS==============*/
+  #works {
+    margin-top: 106px;
+  }
+  .worksContainerWrap {
+    margin: 32px 0 38px;
+    width: 280px;
+  }
+  .worksWrapImg {
+    width: 280px;
+    height: 171px;
+  }
+  .worksWrapDesc {
+    margin-top: 17px;
+    margin-left: 0;
+  }
+  .worksLoadMore {
+    margin-top: 40px;
+  }
+  #worksLoadMoreButton {
+    font: 400 16px "Karla";
+  }
+  /*==============CONTACTS==============*/
+  #contacts {
+    margin-top: 118px;
+  }
+  .contactsContainer {
+    margin-top: 33px;
+  }
+  /*==============CONTACTS-WrapPhoto==============*/
+  .contactsPhotoImg {
+    width: 271px;
+    height: 281px;
+  }
+  /*==============CONTACTS-WrapAbout==============*/
+  .contactsWrapAbout {
+    width: 280px;
+    margin: 29px auto 0;
+  }
+  .contactsDylanName {
+    width: 280px;
+    font: 600 28px "Nunito";
+    line-height: 40px;
+  }
+  .contactsDylanName::after {
+    margin: 0 0 9px auto;
+  }
+  .contactsDylanDescr {
+    width: 264px;
+    font: 400 20px "Karla";
+    line-height: 30px;
+  }
+  .contactsAboutCTAContainer {
+    margin-top: 41px;
+    width: 280px;
+    flex-wrap: wrap;
+  }
+  .contactsAboutCTA1 {
+    width: 100%;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contactsAboutCTA2 {
+    width: 100%;
+    margin: 22px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contactsAboutCTATitle {
+    font: 600 16px "Nunito";
+    line-height: 26px;
+  }
+  .contactsAboutCTADesc {
+    margin-top: 0;
+    font: italic 400 16px "Karla";
+    line-height: 26px;
+  }
+  /*==============CONTACTS-WrapForm==============*/
+  #contactsForm {
+    width: 234px;
+  }
+  .contactsInputLabel {
+    font: 800 20px "Nunito";
+    margin-bottom: 5px;
+  }
+  .contactsInput {
+    font: 400 18px "Karla";
+    line-height: 27px;
+  }
+  .contactsTextArea {
+    max-height: 219px;
+  }
+  #contactsFormButton {
+    margin-top: 110px;
+    font: 400 16px "Karla";
+  }
+}
+
+/*---------========================================================END<-HOME-PAGE->END========================================================---------*/
+
+
+
+
+
+
+
+
+
+/*---------========================================================3D-RENDERINGS-PAGE========================================================---------*/
+
+
+
+/*---------========================================================END<-3D-RENDERINGS-PAGE->END========================================================---------*/
