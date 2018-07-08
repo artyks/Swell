@@ -1381,6 +1381,241 @@ div[contenteditable]>div {
 
 /*---------========================================================3D-RENDERINGS-PAGE========================================================---------*/
 
+/*==============FIRSTSCREEN==============*/
+#t3DfirstScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#topHouse {
+  width: 1020px;
+  height: 1020px;
+  left: calc((100vw - 1020px)/2 - 120px);
+  top: -100px;
+  position: absolute;
+  background: url(img/top_house.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: matrix(-0.8, -0.6, 0.6, -0.8, 0, 0);
+  z-index: 2;
+}
+#topTree3 {
+  width: 135px;
+  height: 275px;
+  left: calc((100vw - 135px)/2 - 650px);
+  top: 440px;
+  position: absolute;
+  background: url(img/tree_big3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: matrix(0.53, -0.85, -0.85, -0.53, 0, 0);
+  z-index: 1;
+}
+#topTree2 {
+  width: 471px;
+  height: 352px;
+  left: calc((100vw - 471px)/2 + 600px);
+  top: 155px;
+  position: absolute;
+  background: url(img/tree_big2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: matrix(0.66, 0.75, -0.75, 0.66, 0, 0);
+  z-index: 3;
+}
+#topTree1 {
+  width: 319px;
+  height: 655px;
+  left: calc((100vw - 319px)/2 + 520px);
+  top: 670px;
+  position: absolute;
+  background: url(img/tree_big1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: matrix(0.42, 0.91, -0.91, 0.42, 0, 0);
+  z-index: 4;
+}
+#t3DtopHeader {
+  margin-top: 785px;
+  font: normal 700 91px "Nunito";
+  text-align: center;
+  z-index: 10;
+}
+.t3DtopDesc {
+  margin-top: 30px;
+  font: 400 28px "Karla";
+  line-height: 43px;
+  text-align: center;
+  width: 824px;
+  z-index: 10;
+}
+/*==============ADVANTAGES==============*/
+#t3Dadv {
+  margin-top: 185px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.t3DadvContainer {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.t3DadvWrap {
+  width: 390px;
+}
+.t3DadvWrapTitle {
+  width: 290px;
+  display: flex;
+  align-items: center;
+  font: 700 20px "Karla";
+  line-height: 26px;
+}
+.t3DadvWrapTitle1:before {
+  margin-right: 8px;
+  margin-left: -9px;
+  display: flex;
+  align-items: center;
+  content: url(img/adv1.svg);
+  width: 60px;
+  height: 60px;
+}
+.t3DadvWrapTitle2:before {
+  margin-right: 13px;
+  display: flex;
+  align-items: center;  content: url(img/adv2.svg);
+  width: 60px;
+  height: 60px;
+}
+.t3DadvWrapTitle3:before {
+  margin-right: 22px;
+  display: flex;
+  align-items: center;  display: block;
+  content: url(img/adv3.svg);
+  width: 60px;
+  height: 60px;
+}
+.t3DadvWrapTitle4:before {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;  display: block;
+  content: url(img/adv4.svg);
+  width: 60px;
+  height: 60px;
+}
+.t3DadvWrapDesc {
+  margin-top: 23px;
+  font: 400 18px "Karla";
+  line-height: 27px;
+}
+/*==============SERVICES==============*/
+#t3Dserv {
+  margin-top: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.t3DservContainer {
+  width: 100%;
+  margin-top: 33px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.t3DservWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 67px;
+}
+.t3DservWrapTitle {
+  font: 700 24px "Karla";
+  text-align: center;
+}
+.t3DservWrapImg {
+  width: 524.16px;
+  height: 319.86px;
+  margin-top: 37px;
+  border-radius: 130px;
+  background-size: cover;
+}
+.t3DservWrapImg1 {
+  background-image: url(img/service1.jfif)
+}
+.t3DservWrapImg2 {
+  background-image: url(img/service2.jfif)
+}
+.t3DservWrapImg3 {
+  background-image: url(img/service3.jfif)
+}
+.t3DservWrapImg4 {
+  background-image: url(img/service4.jfif)
+}
+.t3DservWrapImg5 {
+  background-image: url(img/service5.jfif)
+}
+.t3DservWrapImg6 {
+  background-image: url(img/service6.jfif)
+}
+.t3DservWrapDesc {
+  width: 440px;
+  margin-top: 32px;
+  font: 400 20px "Karla";
+  line-height: 30px;
+}
+/*==============PROCESS==============*/
+#t3Dprocess {
+  margin-top: 195px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.t3DprocessContainer {
+  width: 100%;
+  margin-top: 46px;
+  display: flex;
+}
+.t3DprocessWrap {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+.t3DprocessWrapTitle {
+  font: 700 24px "Karla";
+}
+.t3DprocessWrapTitle span {
+  font: 700 40px "Nunito";
+  line-height: 60px;
+}
+.t3DprocessWrapImg {
+  margin-top: 40px;
+  width: 550px;
+  height: 470px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.t3DprocessWrapImg1 {
+  background-image: url(img/3d-processStep1.png);
+  background-size: cover;
+}
+.t3DprocessWrapImg2 {
+  background-image: url(img/3d-processStep2.png);
+  margin-left: 10px;
+}
+.t3DprocessWrapImg3 {
+  background-image: url(img/3d-processStep3.png);
+}
+.t3DprocessWrapDesc {
+  width: 350px;
+  margin-top: 70px;
+  font: 400 20px "Karla";
+  line-height: 30px;
+}
+.t3DprocessWrapDesc2 {
+  width: 353px;
+}
 
 
 /*---------========================================================END<-3D-RENDERINGS-PAGE->END========================================================---------*/
