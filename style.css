@@ -34,9 +34,10 @@ body {
 }
 #bodySection {
   background: linear-gradient(164.44deg, #25CDF2 6.44%, #0C86DF 23.88%, #1A3C7E 42.71%, #000A16 62.12%);
+  overflow-x: hidden;
 }
 #bodySection[footerUnderPage="on"] {
-  margin-bottom: 161px;
+  margin-bottom: 253px;
   padding-bottom: 125px;
   position: relative;
   z-index: 1;
@@ -57,6 +58,9 @@ header {
 }
 
 @media screen and (max-width: 1919px) {
+  #bodySection[footerUnderPage="on"] {
+    margin-bottom: 268px;
+  }
   header {
     width: 1280px;
   }
@@ -66,6 +70,9 @@ header {
 }
 
 @media screen and (max-width: 1439px) {
+  #bodySection[footerUnderPage="on"] {
+    margin-bottom: 251px;
+  }
   header {
     width: 1000px;
   }
@@ -75,6 +82,9 @@ header {
 }
 
 @media screen and (max-width: 1079px) {
+  #bodySection[footerUnderPage="on"] {
+    margin-bottom: 265px;
+  }
   header {
     width: 520px;
   }
@@ -167,6 +177,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 9999;
 }
 #headerLogo {
   width: 103px;
@@ -292,6 +304,7 @@ footer {
 .socialsItem:first-child {
   margin-left: 0px;
 }
+/*==============CTAbutton==============*/
 footer[footerUnderPage="on"] {
   width: 100%;
   position: fixed;
@@ -299,8 +312,47 @@ footer[footerUnderPage="on"] {
   z-index: 0;
   bottom: 0;
 }
+footer[ctabutton="on"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer[ctabutton="on"] #footer {
+  margin-top: 82px;
+}
+#footerCTAcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 57px;
+}
+#footerCTAbutton {
+  width: 180px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0BCA3A;
+  border: 1px solid #0BCA3A;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 100px rgba(11, 202, 58, 0.5);
+  border-radius: 15px;
+  font: 700 20px "Karla";
+  color: #FFFFFF;
+}
+.footerCTAtext {
+  margin-right: 108px;
+  font: italic 700 24px "Nunito";
+  color: #000915;
+}
 
 @media screen and (max-width: 1919px) {
+  /*==============CTAbutton==============*/
+  .footerCTAtext {
+    margin-right: 132px;
+  }
+  /*==============End-CTAbutton==============*/
   #footer {
     width: 1280px;
     margin: 90px auto 42px;
@@ -308,6 +360,14 @@ footer[footerUnderPage="on"] {
 }
 
 @media screen and (max-width: 1439px) {
+  /*==============CTAbutton==============*/
+  footer[ctabutton="on"] #footer {
+    margin-top: 65px;
+  }
+  .footerCTAtext {
+    margin-right: 82px;
+  }
+  /*==============End-CTAbutton==============*/
   #footer {
     width: 1000px;
     margin: 90px auto 42px;
@@ -318,6 +378,19 @@ footer[footerUnderPage="on"] {
 }
 
 @media screen and (max-width: 1079px) {
+  /*==============CTAbutton==============*/
+  footer[ctabutton="on"] #footer {
+    margin-top: 78px;
+  }
+  #footerCTAcontainer {
+    width: 520px;
+    margin-top: 73px;
+    justify-content: space-between;
+  }
+  .footerCTAtext {
+    margin-right: 0;
+  }
+  /*==============End-CTAbutton==============*/
   #footer {
     width: 520px;
     margin: 110px auto 30px;
@@ -1368,6 +1441,8 @@ div[contenteditable]>div {
     font: 400 16px "Karla";
   }
 }
+/*================================End-Media--<600px================================*/
+
 
 /*---------========================================================END<-HOME-PAGE->END========================================================---------*/
 
@@ -1397,7 +1472,7 @@ div[contenteditable]>div {
   background-size: contain;
   background-repeat: no-repeat;
   transform: matrix(-0.8, -0.6, 0.6, -0.8, 0, 0);
-  z-index: 2;
+  z-index: 1;
 }
 #topTree3 {
   width: 135px;
@@ -1409,7 +1484,7 @@ div[contenteditable]>div {
   background-size: contain;
   background-repeat: no-repeat;
   transform: matrix(0.53, -0.85, -0.85, -0.53, 0, 0);
-  z-index: 1;
+  z-index: 2;
 }
 #topTree2 {
   width: 471px;
@@ -1466,48 +1541,76 @@ div[contenteditable]>div {
   width: 390px;
 }
 .t3DadvWrapTitle {
-  width: 290px;
+  width: 220px;
   display: flex;
+  position: relative;
   align-items: center;
   font: 700 20px "Karla";
   line-height: 26px;
 }
+.t3DadvWrapTitle1 {
+  margin-left: 65px;
+}
 .t3DadvWrapTitle1:before {
-  margin-right: 8px;
   margin-left: -9px;
+  position: absolute;
+  left: -65px;
   display: flex;
   align-items: center;
-  content: url(img/adv1.svg);
-  width: 60px;
+  content: "";
+  background-image: url(img/adv1.svg);
+  background-size: cover;
+  width: 65px;
   height: 60px;
+}
+.t3DadvWrapTitle2 {
+  margin-left: 75px;
 }
 .t3DadvWrapTitle2:before {
-  margin-right: 13px;
+  position: absolute;
+  left: -75px;
   display: flex;
-  align-items: center;  content: url(img/adv2.svg);
+  align-items: center;
+  content: "";
+  background-image: url(img/adv2.svg);
+  background-size: cover;
   width: 60px;
   height: 60px;
+}
+.t3DadvWrapTitle3 {
+  margin-left: 75px;
 }
 .t3DadvWrapTitle3:before {
-  margin-right: 22px;
+  position: absolute;
+  left: -75px;
   display: flex;
-  align-items: center;  display: block;
-  content: url(img/adv3.svg);
+  align-items: center;
+  content: "";
+  background-image: url(img/adv3.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 60px;
   height: 60px;
 }
+.t3DadvWrapTitle4 {
+  margin-left: 65px;
+}
 .t3DadvWrapTitle4:before {
-  margin-right: 10px;
+  position: absolute;
+  left: -65px;
   display: flex;
-  align-items: center;  display: block;
-  content: url(img/adv4.svg);
-  width: 60px;
+  align-items: center;
+  content: "";
+  background-image: url(img/adv4.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 46px;
   height: 60px;
 }
 .t3DadvWrapDesc {
-  margin-top: 23px;
-  font: 400 18px "Karla";
-  line-height: 27px;
+  margin-top: 20px;
+  font: 400 16px "Karla";
+  line-height: 24px;
 }
 /*==============SERVICES==============*/
 #t3Dserv {
@@ -1616,6 +1719,351 @@ div[contenteditable]>div {
 .t3DprocessWrapDesc2 {
   width: 353px;
 }
+
+/*================================Media--<1920px================================*/
+@media screen and (max-width:1919px) {
+  /*==============FIRSTSCREEN==============*/
+  #topHouse {
+    width: 900px;
+    height: 900px;
+    left: calc((100vw - 900px)/2 - 70px);
+    top: -130px;
+  }
+  #topTree3 {
+    width: 135px;
+    height: 275px;
+    left: calc((100vw - 135px)/2 - 480px);
+    top: 390px;
+  }
+  #topTree2 {
+    width: 353px;
+    height: 264px;
+    left: calc((100vw - 353px)/2 + 475px);
+    top: 85px;
+  }
+  #topTree1 {
+    width: 281px;
+    height: 578px;
+    left: calc((100vw - 281px)/2 + 415px);
+    top: 465px;
+  }
+  #t3DtopHeader {
+    margin-top: 585px;
+  }
+  .t3DtopDesc {
+    margin-top: 20px;
+    width: 630px;
+  }
+  /*==============ADVANTAGES==============*/
+  #t3Dadv {
+    margin-top: 205px;
+  }
+  .t3DadvContainer {
+    margin-top: 85px;
+  }
+  .t3DadvWrap {
+    width: 260px;
+  }
+  .t3DadvWrapTitle {
+    width: 190px;
+  }
+  .t3DadvWrapDesc {
+    margin-top: 23px;
+  }
+  /*==============SERVICES==============*/
+  #t3Dserv {
+    margin-top: 180px;
+  }
+  .t3DservContainer {
+    margin-top: 0px;
+  }
+  .t3DservWrap {
+    margin: 90px 0 26px;
+  }
+  .t3DservWrapImg {
+    width: 400.69px;
+    height: 244.27px;
+    margin-top: 27px;
+    border-radius: 100px;
+  }
+  .t3DservWrapDesc {
+    width: 345px;
+    margin-top: 28px;
+  }
+  /*==============PROCESS==============*/
+  #t3Dprocess {
+    margin-top: 145px;
+  }
+  .t3DprocessContainer {
+    margin-top: 73px;
+  }
+  .t3DprocessWrapImg {
+    margin-top: 0px;
+    width: 420px;
+    height: 370px;
+  }
+  .t3DprocessWrapImg1 {
+    background-size: contain;
+  }
+  .t3DprocessWrapImg2 {
+    background-size: cover;
+  }
+  .t3DprocessWrapImg3 {
+    background-size: cover;
+  }
+  .t3DprocessWrapDesc {
+    width: 265px;
+    margin-top: 0px;
+  }
+  .t3DprocessWrapDesc2 {
+    width: 303px;
+  }
+}
+/*================================End-Media--<1920px================================*/
+
+
+/*================================Media--<1440px================================*/
+@media screen and (max-width:1439px) {
+  /*==============FIRSTSCREEN==============*/
+  #topHouse {
+    width: 784px;
+    height: 784px;
+    left: calc((100vw - 784px)/2 - 30px);
+    top: -90px;
+  }
+  #topTree3 {
+    width: 118px;
+    height: 240px;
+    left: calc((100vw - 118px)/2 - 355px);
+    top: 385px;
+    transform: rotate(161.99deg)
+  }
+  #topTree2 {
+    width: 327px;
+    height: 245px;
+    left: calc((100vw - 327px)/2 + 430px);
+    top: 75px;
+    transform: rotate(48.96deg);
+  }
+  #topTree1 {
+    width: 242px;
+    height: 497px;
+    left: calc((100vw - 242px)/2 + 325px);
+    top: 345px;
+    transform: rotate(-115.04deg);
+  }
+  #t3DtopHeader {
+    margin-top: 565px;
+  }
+  .t3DtopDesc {
+    margin-top: 30px;
+    width: 560px;
+  }
+  /*==============ADVANTAGES==============*/
+  #t3Dadv {
+    margin-top: 195px;
+  }
+  .t3DadvContainer {
+    margin-top: 70px;
+  }
+  .t3DadvWrap {
+    width: 220px;
+  }
+  .t3DadvWrapTitle {
+    width: 170px;
+    margin-left: 50px;
+  }
+  .t3DadvWrapTitle1 {
+    margin-left: 45px;
+  }
+  .t3DadvWrapTitle1:before {
+    left: -44px;
+    width: 48px;
+    height: 48px;
+  }
+  .t3DadvWrapTitle2:before {
+    left: -50px;
+    width: 40px;
+    height: 40px;
+  }
+  .t3DadvWrapTitle3:before {
+    left: -50px;
+    width: 40px;
+    height: 40px;
+  }
+  .t3DadvWrapTitle4 {
+    margin-left: 45px;
+  }
+  .t3DadvWrapTitle4:before {
+    left: -45px;
+    width: 35px;
+    height: 45px;
+  }
+  .t3DadvWrapDesc {
+    margin-top: 35px;
+  }
+  /*==============SERVICES==============*/
+  #t3Dserv {
+    margin-top: 150px;
+  }
+  .t3DservWrap {
+    margin: 65px 0 35px;
+    display: grid;
+    grid-template-columns: 220px 220px;
+    grid-column-gap: 40px;
+    grid-row-gap: 15px;
+    align-items: center;
+  }
+  .t3DservWrapImg {
+    width: 220px;
+    height: 160px;
+    margin: 0;
+    border-radius: 80px;
+    order: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .t3DservWrapTitle {
+    order: 2;
+    font: 700 20px "Karla";
+    line-height: 26px;
+    text-align: left;
+    align-self: self-end;
+  }
+  .t3DservWrapDesc {
+    order: 3;
+    width: 210px;
+    margin-top: 0;
+    font: 400 16px "Karla";
+    line-height: 24px;
+    align-self: self-start;
+  }
+  /*==============PROCESS==============*/
+  #t3Dprocess {
+    margin-top: 140px;
+  }
+  .t3DprocessContainer {
+    margin-top: 80px;
+  }
+  .t3DprocessWrapImg {
+    margin-top: 0px;
+    width: 330px;
+    height: 330px;
+  }
+  .t3DprocessWrapImg1 {
+    width: 310px;
+  }
+  .t3DprocessWrapDesc {
+    width: 270px;
+  }
+}
+/*================================End-Media--<1440px================================*/
+
+/*================================Media--<1080px================================*/
+@media screen and (max-width:1079px) {
+  /*==============FIRSTSCREEN==============*/
+  #topHouse {
+    width: 470px;
+    height: 470px;
+    left: calc((100vw - 448px)/2 - 30px);
+    top: 170px;
+  }
+  #topTree3 {
+    width: 77.45px;
+    height: 157.44px;
+    left: calc((100vw - 77.45px)/2 - 220px);
+    top: 480px;
+  }
+  #topTree2 {
+    width: 216.26px;
+    height: 161.77px;
+    left: calc((100vw - 216.26px)/2 + 230px);
+    top: 165px;
+  }
+  #topTree1 {
+    width: 156.83px;
+    height: 322.12px;
+    left: calc((100vw - 156.83px)/2 + 225px);
+    top: 465px;
+  }
+  #t3DtopHeader {
+    margin-top: 565px;
+    font: 700 60px "Nunito";
+  }
+  .t3DtopDesc {
+    margin-top: 25px;
+    width: 466px;
+  }
+  /*==============ADVANTAGES==============*/
+  #t3Dadv {
+    margin-top: 100px;
+  }
+  .t3DadvContainer {
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .t3DadvWrap {
+    margin-bottom: 70px;
+  }
+  .t3DadvWrapDesc {
+    margin-top: 30px;
+  }
+  /*==============SERVICES==============*/
+  #t3Dserv {
+    margin-top: 50px;
+  }
+  .t3DservContainer {
+    margin: 75px 0 0;
+  }
+  .t3DservWrap {
+    margin: 0px 0 50px;
+    grid-template-columns: 257px 220px;
+    grid-column-gap: 33px;
+    grid-row-gap: 20px;
+  }
+  .t3DservWrapImg {
+    width: 257px;
+    height: 187px;
+  }
+  .t3DservWrapDesc {
+    width: 220px;
+  }
+  /*==============PROCESS==============*/
+  #t3Dprocess {
+    margin-top: 80px;
+  }
+  .t3DprocessContainer {
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .t3DprocessWrap {
+    margin: 0 auto 90px;
+  }
+  .t3DprocessWrapImg {
+    width: 520px;
+    height: 480px;
+  }
+  .t3DprocessWrapImg1 {
+    margin-top: -30px;
+  }
+  .t3DprocessWrapImg2 {
+    margin: -70px -20px 0 0;
+  }
+  .t3DprocessWrapImg3 {
+    margin-top: -40px;
+  }
+  .t3DprocessWrapDesc1 {
+    margin-top: -30px;
+  }
+  .t3DprocessWrapDesc2 {
+    margin-top: -80px;
+  }
+  .t3DprocessWrapDesc3 {
+    margin-top: -80px;
+  }
+}
+/*================================End-Media--<1080px================================*/
+
 
 
 /*---------========================================================END<-3D-RENDERINGS-PAGE->END========================================================---------*/
