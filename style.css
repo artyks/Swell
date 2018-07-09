@@ -94,6 +94,9 @@ header {
 }
 
 @media screen and (max-width: 599px) {
+  #bodySection[footerUnderPage="on"] {
+    margin-bottom: 415px;
+  }
   header {
     width: 280px;
     height: 55px;
@@ -408,6 +411,20 @@ footer[ctabutton="on"] #footer {
 }
 
 @media screen and (max-width: 599px) {
+  /*==============CTAbutton==============*/
+  footer[ctabutton="on"] #footer {
+    margin-top: 96px;
+  }
+  #footerCTAcontainer {
+    width: 280px;
+    flex-direction: column;
+    margin-top: 60px;
+    justify-content: space-between;
+  }
+  .footerCTAtext {
+    margin-bottom: 55px;
+  }
+  /*==============End-CTAbutton==============*/
   #footer {
     flex-wrap: wrap;
     width: 280px;
@@ -2039,6 +2056,9 @@ div[contenteditable]>div {
   .t3DprocessWrap {
     margin: 0 auto 90px;
   }
+  .t3DprocessWrap:last-child {
+    margin: 0 auto 0;
+  }
   .t3DprocessWrapImg {
     width: 520px;
     height: 480px;
@@ -2063,6 +2083,174 @@ div[contenteditable]>div {
   }
 }
 /*================================End-Media--<1080px================================*/
+
+/*================================Media--<600px================================*/
+@media screen and (max-width:599px) {
+  /*==============FIRSTSCREEN==============*/
+  #topHouse {
+    width: 285px;
+    height: 285px;
+    left: calc((100vw - 285px)/2 - 13px);
+    top: 150px;
+  }
+  #topTree3 {
+    width: 77.45px;
+    height: 157.44px;
+    left: calc((100vw - 77.45px)/2 - 135px);
+    top: 350px;
+  }
+  #topTree2 {
+    width: 165.08px;
+    height: 123.49px;
+    left: calc((100vw - 165.08px)/2 + 105px);
+    top: 105px;
+  }
+  #topTree1 {
+    width: 156.83px;
+    height: 322.12px;
+    left: calc((100vw - 156.83px)/2 + 41px);
+    top: 450px;
+  }
+  #t3DtopHeader {
+    margin-top: 370px;
+    width: 280px;
+    font: 700 40px "Nunito";
+  }
+  .t3DtopDesc {
+    margin-top: 15px;
+    width: 280px;
+    font: 400 18px "Karla";
+    line-height: 27px;
+  }
+  /*==============ADVANTAGES==============*/
+  #t3Dadv {
+    margin-top: 130px;
+    position: relative;
+    z-index: 10;
+  }
+  .t3DadvContainer {
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .t3DadvWrap {
+    margin-bottom: 55px;
+    width: 260px;
+    justify-content: center;
+  }
+  .t3DadvWrapTitle {
+    width: 230px;
+    margin: 0 auto 0;
+    flex-direction: column;
+    text-align: center;
+    font: 700 18px "Karla";
+    line-height: 23px;
+  }
+  .t3DadvWrapTitle:before {
+    position: unset;
+    margin: 0 0 10px;
+  }
+  .t3DadvWrapTitle1:before {
+    margin: 0 0 6px;
+  }
+  .t3DadvWrapDesc {
+    margin-top: 15px;
+    width: 260px;
+  }
+  /*==============SERVICES==============*/
+  #t3Dserv {
+    margin-top: 95px;
+  }
+  .t3DservContainer {
+    margin: 0;
+  }
+  .t3DservWrap {
+    margin: 60px 0 0;
+    display: flex;
+    align-items: center;
+    width: 280px;
+  }
+  .t3DservWrapTitle {
+    order: 0;
+    text-align: center;
+    align-self: center;
+  }
+  .t3DservWrapImg {
+    width: 280px;
+    height: 187px;
+    margin-top: 25px;
+  }
+  .t3DservWrapDesc {
+    width: 260px;
+    margin-top: 25px;
+    align-self: center;
+  }
+  /*==============PROCESS==============*/
+  #t3Dprocess {
+    margin-top: 155px;
+  }
+  .t3DprocessContainer {
+    margin-top: 50px;
+  }
+  .t3DprocessWrap {
+    margin: 0 auto 65px;
+  }
+  .t3DprocessWrap:last-child {
+    margin: 0 auto 0;
+  }
+  .t3DprocessWrapImg {
+    width: 280px;
+    height: 293px;
+  }
+  .t3DprocessWrapTitle {
+    font: 700 20px "Karla";
+    line-height: 26px;
+  }
+  .t3DprocessWrapTitle span {
+    margin-right: 7px;
+    font: 700 20px "Karla";
+    line-height: 26px;
+    display: inline-flex;
+    overflow-x: hidden;
+  }
+  .t3DprocessWrap:nth-child(1) .t3DprocessWrapTitle span {
+    width: 7px;
+  }
+  .t3DprocessWrap:nth-child(2) .t3DprocessWrapTitle span {
+    width: 12px;
+  }
+  .t3DprocessWrap:nth-child(3) .t3DprocessWrapTitle span {
+    width: 12px;
+  }
+  .t3DprocessWrapTitle:before {
+    content: "#";
+    font: 700 20px "Karla";
+    line-height: 26px;
+  }
+  .t3DprocessWrapImg1 {
+    margin-top: -20px;
+  }
+  .t3DprocessWrapImg2 {
+    margin: -50px -20px 0 0;
+  }
+  .t3DprocessWrapImg3 {
+    margin-top: -30px;
+  }
+  .t3DprocessWrapDesc {
+    width: 280px;
+  }
+  .t3DprocessWrapDesc1 {
+    margin-top: -10px;
+  }
+  .t3DprocessWrapDesc2 {
+    margin-top: -50px;
+  }
+  .t3DprocessWrapDesc3 {
+    margin-top: -50px;
+  }
+}
+/*================================End-Media--<600px================================*/
+
 
 
 
