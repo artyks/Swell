@@ -190,7 +190,7 @@ header {
 #topBgShadows {
   position: absolute;
   top: 0;
-  left: -100px;
+  left: -150px;
   background: url(img/bg-shadows/topShadows-3-min.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -200,22 +200,24 @@ header {
 @media screen and (max-width: 1439px) {
   #topBgShadows {
     height: 500px;
-    top: -50px;
-    left: -50px;
+    top: 0px;
+    left: -150px;
   }
 }
 @media screen and (max-width: 1079px) {
   #topBgShadows {
-    height: 350px;
+    height: 550px;
+    width: 1400px;
     top: -50px;
-    left: 0px;
+    left: -150px;
   }
 }
 @media screen and (max-width: 599px) {
   #topBgShadows {
-    height: 200px;
+    height: 400px;
+    width: 800px;
     top: 0px;
-    left: -20px;
+    left: -150px;
   }
 }
 
