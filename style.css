@@ -22,19 +22,39 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #09C4ED;
 }
+/*==============END>Selection==============*/
 
+/*==============PLACEHOLDER==============*/
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+  opacity: 0.5;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fff;
+  opacity: 0.5;
+}
+/*==============END>PLACEHOLDER==============*/
 
 body {
   margin: 0;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   min-width: 320px;
-  color: #fff;
-  font-family: "Karla";
 }
 #bodySection {
   background: linear-gradient(164.44deg, #25CDF2 6.44%, #0C86DF 23.88%, #1A3C7E 42.71%, #000A16 62.12%);
   overflow-x: hidden;
+  font-family: "Karla";
+  color: #fff;
 }
 #bodySection[footerUnderPage="on"] {
   margin-bottom: 253px;
@@ -47,13 +67,13 @@ body {
 }
 main {
   width: 1680px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   margin: 0 auto;
   padding-top: 0px;
 }
 header {
   width: 1680px;
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0 auto;
 }
 
@@ -104,6 +124,9 @@ header {
   main {
     width: 280px;
   }
+
+
+
   /*==============mobileMenu==============*/
   #header[onMobileMenu="on"] {
     position: fixed;
@@ -113,7 +136,6 @@ header {
   .mobileMenu {
     position: fixed;
     height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,6 +185,536 @@ header {
   /*==============End-mobileMenu==============*/
 }
 
+
+/*============================BgShadows============================*/
+#topBgShadows {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  background: url(img/bg-shadows/topShadows-3-min.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 100%;
+}
+@media screen and (max-width: 1439px) {
+  #topBgShadows {
+    height: 500px;
+    top: -50px;
+    left: -50px;
+  }
+}
+@media screen and (max-width: 1079px) {
+  #topBgShadows {
+    height: 350px;
+    top: -50px;
+    left: 0px;
+  }
+}
+@media screen and (max-width: 599px) {
+  #topBgShadows {
+    height: 200px;
+    top: 0px;
+    left: -20px;
+  }
+}
+
+#BgShadow1 {
+  position: absolute;
+  top: 550px;
+  left: 500px;
+}
+@media screen and (max-width: 1919px) {
+  #BgShadow1 {
+    position: absolute;
+    top: 450px;
+    left: 350px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  #BgShadow1 {
+    position: absolute;
+    top: 500px;
+    left: 200px;
+  }
+}
+/*============================END<BgShadows============================*/
+
+
+/*============================CTAform============================*/
+.CTAformContainerWrap::-webkit-scrollbar {
+  width: 6px;
+}
+.CTAformContainerWrap::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0);
+}
+.CTAformContainerWrap::-webkit-scrollbar-thumb {
+  background-color: #09C4ED;
+}
+.marginBottomFullScreen {
+  margin-bottom: 100vh !important;
+}
+
+/*==============CTAform-PLACEHOLDER==============*/
+.CTAformContainer  ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000;
+  opacity: 0.5;
+}
+
+.CTAformContainer  :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #000;
+  opacity: 0.5;
+}
+
+.CTAformContainer  ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #000;
+  opacity: 0.5;
+}
+
+/*==============END>CTAform-PLACEHOLDER==============*/
+.CTAformContainerOuterWrap[visibility="off"] {
+  opacity: 0;
+  z-index: -1;
+}
+.CTAformContainerOuterWrap[visibility="on"] {
+  opacity: 1;
+  z-index: 1;
+}
+.CTAformContainerOuterWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.CTAformContainerWrap {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+  background-color: #fff;
+}
+.CTAformContainer {
+  width: 1680px;
+  margin: 0 auto;
+  position: relative;
+}
+.CTAformHeader {
+  padding-top: 30px;
+  margin: 0 auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+.CTAformHeaderLogo {
+  width: 103px;
+  height: 31px;
+  transition: .2s;
+}
+.CTAformHeaderCross {
+  cursor: pointer;
+  align-self: center;
+}
+
+.CTAformInnerContainer {
+  margin-top: calc(50vh - 615px/2 - 61px - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.CTAform {
+  display: flex;
+  flex-direction: column;
+  margin: 105px auto 0 374px;
+}
+.CTAformOuterWrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 200px;
+}
+.CTAFormWrap {
+  margin-bottom: 60px;
+}
+.CTAFormInputLabel {
+  width: 267px;
+  float: left;
+  font: 800 24px "Nunito";
+}
+.CTAFormInput {
+  width: 255px;
+  margin-right: 90px;
+  font: 400 20px "Karla";
+  line-height: 33px;
+  color: #000;
+  background-color: transparent;
+  border: 0px solid;
+  box-sizing: border-box;
+}
+.CTAFormTextArea {
+  min-height: 33px;
+  max-height: 130px;
+  width: 600px;
+  padding-right: 6px;
+  overflow-y: scroll;
+}
+.CTAFormTextArea::-webkit-scrollbar {
+  width: 3px;
+}
+.CTAFormTextArea::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.CTAFormTextArea::-webkit-scrollbar-thumb {
+  background-color: #09C4ED;
+}
+.CTAFormTextArea:before {
+  opacity: 0.5;
+}
+.CTAFormHiddenTextArea {
+  display: none;
+}
+.CTAFormButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.CTAFormButton {
+  width: 180px;
+  height: 58px;
+  margin-top: 0;
+  margin-left: -40px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  border-radius: 15px;
+  font: 400 20px "Karla";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: #000;
+  cursor: pointer;
+  transition: .2s;
+}
+.CTAFormButton:hover {
+  background: #000;
+  color: #FFF;
+}
+.CTAformFooterText {
+  position: absolute;
+  bottom: 45px;
+  width: 100%;
+  font: 400 16px "Karla";
+  line-height: 24px;
+  text-align: center;
+}
+.CTAformFooterTextMobile {
+  display: none;
+}
+.CTAFormContactMobileContainer {
+  display: none;
+}
+.CTAFormLeftContact, .CTAFormRightContact {
+  font: 400 16px "Karla";
+  text-align: center;
+  width: 320px;
+  position: absolute;
+  transform: rotate(90deg);
+  top: calc(50% - 9px);
+}
+.CTAFormLeftContact {
+  left: -105px;
+}
+.CTAFormRightContact {
+  right: -105px;
+}
+
+@media screen and (max-width: 1919px) {
+  .CTAformContainer {
+    width: 1280px;
+  }
+
+  .CTAformInnerContainer {
+    margin-top: calc(50vh - 510px/2 - 61px - 20px);
+  }
+  .CTAform {
+    margin: 80px auto 0 295px;
+  }
+  .CTAformOuterWrap {
+    height: 144px;
+  }
+  .CTAFormWrap {
+    margin-bottom: 35px;
+  }
+
+  .CTAFormInputLabel {
+    width: 147px;
+  }
+  .CTAFormInput {
+    width: 189px;
+    margin-right: 35px;
+  }
+  .CTAFormTextArea {
+    max-height: 100px;
+    width: 567px;
+  }
+
+  .CTAFormButton {
+    margin-top: 15px;
+    margin-left: -65px;
+  }
+  .CTAFormLeftContact {
+    left: -110px;
+  }
+  .CTAFormRightContact {
+    right: -110px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .CTAformHeaderLogo {
+    margin-left: 40px;
+  }
+  .CTAformContainer {
+    width: 1000px;
+  }
+
+  .CTAformInnerContainer {
+    margin-top: calc(50vh - 449px/2 - 61px - 20px);
+  }
+
+  .blockTopHeader.CTAformTopHeader {
+    font: 700 40px "Nunito";
+    line-height: 76px;
+  }
+  .CTAform {
+    margin: 65px auto 0 160px;
+  }
+
+  .CTAFormButton {
+    margin-top: 5px;
+    margin-left: -60px;
+  }
+  .CTAFormLeftContact {
+    left: -130px;
+  }
+  .CTAFormRightContact {
+    right: -130px;
+  }
+}
+
+@media screen and (max-width: 1079px) {
+  .CTAformContainer {
+    width: 720px;
+  }
+  .CTAformHeaderLogo {
+    margin-left: 0;
+  }
+  .CTAformInnerContainer {
+    margin-top: 80px;
+  }
+  .CTAform {
+    margin: 40px auto 0 23px;
+    height: 342px;
+  }
+  .CTAFormInputLabel {
+    width: 140px;
+    font: 800 22px "Nunito";
+  }
+  .CTAFormInput {
+    width: 200px;
+    margin-right: 31px;
+    font: 400 18px "Karla";
+    line-height: 29px;
+  }
+  .CTAFormTextArea {
+    width: 557px;
+    max-height: 90px;
+  }
+
+  .CTAFormButton {
+    margin-top: 15px;
+    margin-left: -25px;
+  }
+  .CTAformFooterText {
+    display: none;
+  }
+  .CTAformFooterTextMobile {
+    display: block;
+    text-align: center;
+    bottom: 70px;
+    position: unset;
+    margin-top: 40px;
+    font: 400 16px "Karla";
+    line-height: 24px;
+  }
+  .CTAFormContactMobileContainer {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font: 400 16px "Karla";
+  }
+  .CTAFormLeftContactMobile {
+    text-align: left;
+  }
+  .CTAFormRightContactMobile {
+    text-align: right;
+  }
+  .CTAFormLeftContact, .CTAFormRightContact {
+    display: none;
+  }
+}
+@media screen and (max-width: 799px) {
+  .CTAformContainer {
+    width: 520px;
+  }
+  .CTAformInnerContainer {
+    margin-top: 70px;
+  }
+  .CTAform {
+    margin: 67px auto 0 63px;
+    height: 597px;
+  }
+  .CTAformOuterWrap {
+    height: auto;
+  }
+  .CTAFormWrap {
+    margin-bottom: 40px;
+  }
+  .CTAFormInputLabel {
+    width: 180px;
+  }
+  .CTAFormInput {
+    width: 235px;
+    margin-right: 0;
+  }
+  .CTAFormTextArea {
+    width: 235px;
+    max-height: 205px;
+  }
+
+  .CTAFormButton {
+    margin-top: 10px;
+  }
+  .CTAformFooterTextMobile {
+    margin-top: 30px;
+  }
+  .CTAFormContactMobileContainer {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .CTAformContainer {
+    width: 280px;
+  }
+
+  .CTAformInnerContainer {
+    margin-top: 80px;
+  }
+  .CTAform {
+    margin: 57px auto 0 34px;
+    height: auto;
+  }
+  .CTAFormInputLabel {
+    width: 247px;
+    font: 800 20px "Nunito";
+    margin-bottom: 10px;
+  }
+  .CTAFormInput {
+    width: 235px;
+    font: 400 18px "Karla";
+    line-height: 27px;
+  }
+  .CTAFormTextArea {
+    width: 235px;
+    max-height: 205px;
+  }
+
+  .CTAFormButton {
+    margin-top: 20px;
+  }
+  .CTAformFooterTextMobile {
+    width: 194px;
+    font: 400 14px "Karla";
+    line-height: 21px;
+  }
+  .CTAFormContactMobileContainer {
+    margin-top: 96px;
+    font: 400 12px "Karla";
+  }
+}
+/*============================END<CTAform============================*/
+
+
+/*============================SideElements============================*/
+#leftSideSocialsFixed {
+  width: 285px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: -70px;
+  top: calc(50vh - 21px/2 - 50px);
+  transform: translateZ(0) translate(0, -75vh) rotate(90deg);
+  will-change: transform;
+}
+#rightSideSocialsFixed {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  right: -109px;
+  top: calc(50vh - 21px/2 - 50px);
+  transform: translateZ(0) translate(0, -75vh) rotate(90deg);
+  will-change: transform;
+}
+#leftSideSocialsFixed .sideSocialsItem, #rightSideSocialsFixed .sideSocialsItem {
+  opacity: 0.3;
+}
+#leftSideSocialsFixed .sideSocialsItem:hover, #rightSideSocialsFixed .sideSocialsItem:hover {
+  opacity: 1;
+}
+#leftSideSocials {
+  width: 285px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: -70px;
+  top: calc(50vh - 21px/2);
+  transform: rotate(90deg);
+}
+#rightSideSocials {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: -109px;
+  top: calc(50vh - 21px/2);
+  transform: rotate(90deg);
+}
+.sideSocialsItem {
+  font: 400 18px "Karla";
+}
+@media screen and (max-width: 1919px) {
+  #rightSideSocials, #leftSideSocials, #rightSideSocialsFixed, #leftSideSocialsFixed {
+    top: calc(50vh - 18.5px/2);
+  }
+  .sideSocialsItem {
+    font: 400 16px "Karla";
+  }
+}
+@media screen and (max-width: 1439px) {
+ #rightSideSocials, #leftSideSocials, #rightSideSocialsFixed, #leftSideSocialsFixed {
+   display: none;
+ }
+}
+
+
+/*============================END<SideElements============================*/
+
+
+
 /*---------========================================================END<-GENERAL->END========================================================---------*/
 
 
@@ -178,6 +730,7 @@ header {
 #header {
   margin: 30px auto 0;
   display: flex;
+  overflow: hidden;
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -186,10 +739,6 @@ header {
 #headerLogo {
   width: 103px;
   height: 31px;
-  display: block;
-  background: url(img/Swell-logo.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
   transition: .2s;
 }
 #headerMenu {
@@ -308,6 +857,9 @@ footer {
   margin-left: 0px;
 }
 /*==============CTAbutton==============*/
+.footerCTAcontainer {
+  display: none;
+}
 footer[footerUnderPage="on"] {
   width: 100%;
   position: fixed;
@@ -323,14 +875,15 @@ footer[ctabutton="on"] {
 footer[ctabutton="on"] #footer {
   margin-top: 82px;
 }
-#footerCTAcontainer {
+
+footer[ctabutton="on"] .footerCTAcontainer {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   margin-top: 57px;
 }
-#footerCTAbutton {
+footer[ctabutton="on"] #footerCTAbutton {
   width: 180px;
   height: 58px;
   display: flex;
@@ -343,16 +896,21 @@ footer[ctabutton="on"] #footer {
   border-radius: 15px;
   font: 700 20px "Karla";
   color: #FFFFFF;
+  cursor: pointer;
 }
-.footerCTAtext {
+footer[ctabutton="on"] .footerCTAtext {
   margin-right: 108px;
   font: italic 700 24px "Nunito";
   color: #000915;
 }
+footer[footerUnderPage="off"] .footerCTAtext {
+  color: #FFF;
+}
+/*==============End-CTAbutton==============*/
 
 @media screen and (max-width: 1919px) {
   /*==============CTAbutton==============*/
-  .footerCTAtext {
+  footer[ctabutton="on"] .footerCTAtext {
     margin-right: 132px;
   }
   /*==============End-CTAbutton==============*/
@@ -367,7 +925,7 @@ footer[ctabutton="on"] #footer {
   footer[ctabutton="on"] #footer {
     margin-top: 65px;
   }
-  .footerCTAtext {
+  footer[ctabutton="on"] .footerCTAtext {
     margin-right: 82px;
   }
   /*==============End-CTAbutton==============*/
@@ -385,12 +943,12 @@ footer[ctabutton="on"] #footer {
   footer[ctabutton="on"] #footer {
     margin-top: 78px;
   }
-  #footerCTAcontainer {
+  footer[ctabutton="on"] .footerCTAcontainer {
     width: 520px;
     margin-top: 73px;
     justify-content: space-between;
   }
-  .footerCTAtext {
+  footer[ctabutton="on"] .footerCTAtext {
     margin-right: 0;
   }
   /*==============End-CTAbutton==============*/
@@ -415,13 +973,13 @@ footer[ctabutton="on"] #footer {
   footer[ctabutton="on"] #footer {
     margin-top: 96px;
   }
-  #footerCTAcontainer {
+  footer[ctabutton="on"] .footerCTAcontainer {
     width: 280px;
     flex-direction: column;
     margin-top: 60px;
     justify-content: space-between;
   }
-  .footerCTAtext {
+  footer[ctabutton="on"] .footerCTAtext {
     margin-bottom: 55px;
   }
   /*==============End-CTAbutton==============*/
@@ -469,11 +1027,12 @@ footer[ctabutton="on"] #footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 #orb {
   width: 616px;
   height: 624px;
-  background: url(img/orb.svg);
+  background: url(img/orb-min.png);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -494,6 +1053,7 @@ footer[ctabutton="on"] #footer {
   font: normal 700 120px "Nunito";
   position: absolute;
   text-align: center;
+  width: 900px;
 }
 .topDesc {
   font: 400 28px "Karla";
@@ -509,6 +1069,7 @@ footer[ctabutton="on"] #footer {
   margin-top: 186px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .servWrap {
   display: flex;
@@ -543,7 +1104,7 @@ footer[ctabutton="on"] #footer {
 }
 .servWrapListItem.linkTo3D a::after {
   display: block;
-  content: url(img/3d-arrow-right.svg);
+  content: url(img/white-arrow-right.svg);
   margin: 1px 0 0 9px;
 }
 
@@ -554,6 +1115,7 @@ footer[ctabutton="on"] #footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .blockTopHeader {
   font: 700 91px "Nunito";
@@ -564,7 +1126,7 @@ footer[ctabutton="on"] #footer {
   font: 400 20px "Karla";
   line-height: 30px;
   text-align: center;
-  width: 824px;
+  width: 514px;
 }
 .clientsList {
   margin-top: 44px;
@@ -632,8 +1194,10 @@ footer[ctabutton="on"] #footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .worksContainer {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -715,6 +1279,7 @@ footer[ctabutton="on"] #footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .contactsTopDesc {
   display: none;
@@ -1126,6 +1691,7 @@ div[contenteditable]>div {
 
 /*================================End-Media--<1440px================================*/
 
+
 /*================================Media--<1080px================================*/
 
 @media screen and (max-width: 1079px) {
@@ -1345,6 +1911,7 @@ div[contenteditable]>div {
   }
   .blockTopDesc {
     font: 400 16px "Karla";
+    width: 280px;
   }
   .clientsList {
     margin-top: 12px;
@@ -2255,3 +2822,693 @@ div[contenteditable]>div {
 
 
 /*---------========================================================END<-3D-RENDERINGS-PAGE->END========================================================---------*/
+
+
+
+
+
+
+
+
+
+/*---------========================================================PROJECT-PAGE========================================================---------*/
+
+  /*==============GENERAL==============*/
+
+  /*==============PLACEHOLDER==============*/
+body.projectPage  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000;
+    opacity: 0.5;
+  }
+
+body.projectPage  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #000;
+    opacity: 0.5;
+  }
+
+body.projectPage  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #000;
+    opacity: 0.5;
+  }
+  /*==============END>PLACEHOLDER==============*/
+
+body.projectPage #bodySection {
+  background: transparent;
+  color: #111;
+}
+body.projectPage #headerLogo path {
+  fill: #111;
+}
+body.projectPage footer[footerUnderPage="off"] .footerCTAtext {
+    color: #000000;
+}
+body.projectPage .contactsTopDesc {
+  display: block;
+}
+body.projectPage #burgerLines rect {
+  fill: #000;
+}
+  /*==============End-GENERAL==============*/
+
+  /*============================SideElements============================*/
+
+  body.projectPage #leftSideSocials {
+    width: 285px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: -70px;
+    top: calc(50vh - 21px/2 - 100px);
+    transform: rotate(90deg);
+  }
+  body.projectPage #rightSideSocials {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: -109px;
+    top: calc(50vh - 21px/2 - 100px);
+    transform: rotate(90deg);
+  }
+
+  /*============================END<SideElements============================*/
+
+  /*==============OTHER-PROJECTS==============*/
+  body.projectPage #worksLoadMoreButton {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+  }
+  body.projectPage #worksLoadMoreButton:hover {
+    background: #000000;
+    color: #FFF;
+  }
+  @media screen and (max-width: 1439px) {
+    body.projectPage #works {
+        margin-top: 110px;
+    }
+  }
+
+  /* ВРЕМЕННЫЙ ФИКС - УБИРАЕМ ПОСЛЕДНюю РаБОТЫ */
+  @media screen and (max-width:1919px) {
+    body.projectPage .worksContainerWrap:nth-last-child(1) {
+      display: none;
+    }
+    body.projectPage .worksContainerWrap:nth-last-child(2) {
+      display: block;
+    }
+  }
+  @media screen and (max-width:1439px) {
+      body.projectPage .worksContainerWrap:nth-last-child(1) {
+        display: block;
+      }
+  }
+  /* END-ВРЕМЕННЫЙ ФИКС - УБИРАЕМ ПОСЛЕДНюю РаБОТЫ */
+  /*==============END-OTHER-PROJECTS==============*/
+
+  /*==============CTAbutton==============*/
+  #CTA[CTAbutton="off"] {
+    display: none;
+  }
+  #CTA {
+    padding-top: 80px;
+  }
+  .CTAcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 57px;
+  }
+  .CTAbutton {
+    width: 180px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0BCA3A;
+    border: 1px solid #0BCA3A;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 100px rgba(11, 202, 58, 0.5);
+    border-radius: 15px;
+    font: 700 20px "Karla";
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+  .CTAtext {
+    margin-right: 108px;
+    font: italic 700 24px "Nunito";
+    color: #000915;
+  }
+  @media screen and (max-width: 1919px) {
+    #CTA {
+      padding-top: 50px;
+    }
+    .CTAtext {
+      margin-right: 132px;
+    }
+  }
+  @media screen and (max-width: 1439px) {
+    .CTAtext {
+      margin-right: 82px;
+    }
+  }
+  @media screen and (max-width: 1079px) {
+    #CTA {
+      padding-top: 30px;
+    }
+    .CTAcontainer {
+      width: 520px;
+      margin-top: 73px;
+      justify-content: space-between;
+    }
+    .CTAtext {
+      margin-right: 0;
+    }
+  }
+  @media screen and (max-width: 599px) {
+    .CTAcontainer {
+      width: 280px;
+      flex-direction: column;
+      margin-top: 60px;
+      justify-content: space-between;
+    }
+    .CTAtext {
+      margin-bottom: 55px;
+      text-align: center;
+    }
+  }
+  /*==============END-CTAbutton==============*/
+
+  /*==============CONTACTS-WrapForm==============*/
+  body.projectPage #contactsFormButton {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    color: #000;
+  }
+  body.projectPage #contactsFormButton:hover {
+    background: #000000;
+    color: #FFF;
+  }
+  body.projectPage .contactsInput {
+    color: #000;
+  }
+  @media screen and (min-width: 1920px) {
+    body.projectPage .contactsWrapForm {
+      width: 880px;
+      height: auto;
+      margin: 190px auto 0;
+    }
+    body.projectPage .contactsWrapForm .contactsWrapTitle {
+      width: 100%;
+      text-align: center;
+    }
+    body.projectPage .contactsFormWrap {
+      margin-bottom: 35px;
+    }
+    body.projectPage .contactsFormWrap:last-child {
+      margin-bottom: 0px;
+    }
+    body.projectPage #contactsForm {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 216px;
+    }
+    body.projectPage .contactsInputLabel {
+      margin-right: 27px;
+    }
+    body.projectPage .contactsInput {
+      width: 302px;
+      color: #000;
+    }
+    body.projectPage .contactsTextArea {
+      max-height: 195px;
+      /* margin-left: 147px; */
+    }
+    /* Херня */
+    body.projectPage .contactsTextArea:focus {
+      /*border: 1px solid #FFFFFF;
+    border-radius: 15px;
+    /* padding: 6px !important; */
+      /* margin-left: 147px; */
+      width: 302px;
+    }
+    /* Херня */
+    body.projectPage .contactsFormButtonContainer {
+      display: flex;
+      justify-content: center;
+    }
+    body.projectPage #contactsFormButton {
+      margin-top: 7px;
+      width: 180px;
+      border: 1px solid #000000;
+      box-sizing: border-box;
+      color: #000;
+    }
+    body.projectPage #contactsFormButton:hover {
+      background: #000000;
+      color: #FFF;
+    }
+  }
+  @media screen and (max-width: 1920px) {
+    body.projectPage .contactsWrapForm {
+      margin: 190px auto 0;
+    }
+  }
+  /*==============END>CONTACTS-WrapForm==============*/
+
+
+  /*==============PROJECT-HEADER==============*/
+  #projectTop {
+    margin: 75px 0 0;
+    padding-bottom: 50px;
+  }
+  .projectTopContainer {
+    width: 820px;
+    margin: 0 auto;
+  }
+  #projectTopTitle {
+    font: 700 50px "Nunito";
+  }
+  #projectTopDesc {
+    margin-top: 50px;
+    width: 630px;
+    font: 400 28px "Karla";
+    line-height: 43px;
+  }
+  .projectTopTags {
+    margin-top: 43px;
+    font: 400 18px "Karla";
+  }
+  /*==============End-PROJECT-HEADER==============*/
+
+  /*==============BLOCK-1 (Large pic with description)==============*/
+  .projectBlock1 {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+  .projectBlock1Img {
+    width: 100vw;
+    height: 843px;
+    align-self: center;
+    background: url(img/Projects/Fullscreen-example.png);
+    background-size: cover;
+  }
+  .projectBlock1Desc {
+    width: 820px;
+    padding-bottom: 30px;
+    margin-top: 80px;
+    font: 400 28px "Karla";
+    line-height: 43px;
+  }
+  /*==============End-BLOCK-1 (Large pic with description)==============*/
+
+  /*==============BLOCK-2 (Big pic with description and link)==============*/
+  .projectBlock2 {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+  .projectBlock2Img {
+    width: 100%;
+    height: 1025px;
+    align-self: center;
+    background: url(img/Projects/project-example-1.jpg);
+    background-size: cover;
+  }
+  .projectBlock2Wrap {
+    margin-top: 80px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .projectBlock2WrapDesc {
+    width: 780px;
+    font: 400 28px "Karla";
+    line-height: 43px;
+  }
+  .projectBlock2WrapLinkToProject {
+    margin-right: 17px;
+    font: italic 600 20px "Nunito";
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+  }
+  .projectBlock2WrapLinkToProject:after {
+    display: block;
+    content: url(img/black-arrow-right.svg);
+    margin: 1px 0 0 9px;
+  }
+  /*==============End-BLOCK-2 (Big pic with description and link)==============*/
+
+  /*==============BLOCK-3 (2 medium pics)==============*/
+  .projectBlock3 {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .projectBlock3Img {
+    width: 820px;
+    height: 500px;
+    background: url(img/Projects/project-example-2.jpg);
+    background-size: cover;
+  }
+  .projectBlock3Img:last-child {
+    background: url(img/Projects/project-example-3.jpg);
+    background-size: cover;
+  }
+  /*==============End-BLOCK-3 (2 medium pics)==============*/
+
+  /*==============BLOCK-4 (Big text in 2 columns)==============*/
+  .projectBlock4 {
+    margin-top: 80px;
+    padding-bottom: 30px;
+  }
+  .projectBlock4Text {
+    width: 1640px;
+    column-count: 2;
+    column-width: 780px;
+    column-gap: 80px;
+    font: 400 28px "Karla";
+    line-height: 43px;
+  }
+  /*==============End-BLOCK-4 (Big text in 2 columns)==============*/
+
+
+  /*================================Media--<1920px================================*/
+  @media screen and (max-width:1919px) {
+    /*==============PROJECT-HEADER==============*/
+    #projectTop {
+      margin: 110px 0 0;
+      padding-bottom: 60px;
+    }
+    .projectTopContainer {
+      width: 630px;
+    }
+    /*==============End-PROJECT-HEADER==============*/
+
+    /*==============BLOCK-1 (Large pic with description)==============*/
+    .projectBlock1 {
+      margin-top: 50px;
+    }
+    .projectBlock1Desc {
+      width: 600px;
+      padding-bottom: 60px;
+    }
+    /*==============End-BLOCK-1 (Large pic with description)==============*/
+
+    /*==============BLOCK-2 (Big pic with description and link)==============*/
+    .projectBlock2 {
+      margin-top: 50px;
+    }
+    .projectBlock2Img {
+      height: 671px;
+    }
+    .projectBlock2Wrap {
+      padding-bottom: 60px;
+    }
+    .projectBlock2WrapDesc {
+      width: 600px;
+    }
+    /*==============End-BLOCK-2 (Big pic with description and link)==============*/
+
+    /*==============BLOCK-3 (2 medium pics)==============*/
+    .projectBlock3 {
+      margin-top: 50px;
+    }
+    .projectBlock3Img {
+      width: 630px;
+      height: 384px;
+    }
+    /*==============End-BLOCK-3 (2 medium pics)==============*/
+
+    /*==============BLOCK-4 (Big text in 2 columns)==============*/
+    .projectBlock4 {
+      margin-top: 50px;
+      padding-bottom: 60px;
+    }
+    .projectBlock4Text {
+      width: 1250px;
+      column-width: 600px;
+      column-gap: 50px;
+    }
+    /*==============End-BLOCK-4 (Big text in 2 columns)==============*/
+
+  }
+  /*================================End-Media--<1920px================================*/
+
+
+  /*================================Media--<1440px================================*/
+  @media screen and (max-width:1439px) {
+    /*==============PROJECT-HEADER==============*/
+    #projectTop {
+      padding-bottom: 67px;
+    }
+    .projectTopContainer {
+      width: 520px;
+      margin-left: 260px;
+    }
+    #projectTopDesc {
+      width: 520px;
+    }
+    .projectTopTags {
+      margin-top: 36px;
+    }
+    /*==============End-PROJECT-HEADER==============*/
+
+    /*==============BLOCK-1 (Large pic with description)==============*/
+    .projectBlock1Img {
+      height: 632px;
+    }
+    .projectBlock1Desc {
+      margin-top: 50px;
+      padding-bottom: 20px;
+    }
+    /*==============End-BLOCK-1 (Large pic with description)==============*/
+
+    /*==============BLOCK-2 (Big pic with description and link)==============*/
+    .projectBlock2Img {
+      height: 524px;
+    }
+    .projectBlock2Wrap {
+      margin-top: 50px;
+      padding-bottom: 20px;
+    }
+    .projectBlock2WrapDesc {
+      width: 633px;
+    }
+    /*==============End-BLOCK-2 (Big pic with description and link)==============*/
+
+    /*==============BLOCK-3 (2 medium pics)==============*/
+    .projectBlock3Img {
+      width: 480px;
+      height: 292px;
+    }
+    /*==============End-BLOCK-3 (2 medium pics)==============*/
+
+    /*==============BLOCK-4 (Big text in 2 columns)==============*/
+    .projectBlock4 {
+      margin-top: 50px;
+      padding-bottom: 20px;
+    }
+    .projectBlock4Text {
+      width: 1000px;
+      column-width: 480px;
+      column-gap: 40px;
+    }
+    /*==============End-BLOCK-4 (Big text in 2 columns)==============*/
+  }
+
+  /*================================End-Media--<1440px================================*/
+
+
+  /*================================Media--<1080px================================*/
+
+  @media screen and (max-width: 1079px) {
+    /*==============PROJECT-HEADER==============*/
+    #projectTop {
+      margin: 75px 0 0;
+      padding-bottom: 40px;
+    }
+    .projectTopContainer {
+      width: 340px;
+      margin-left: 95px;
+    }
+    #projectTopTitle {
+      font: 700 35px "Nunito";
+    }
+    #projectTopDesc {
+      margin-top: 25px;
+      width: 340px;
+      font: 400 20px "Karla";
+      line-height: 30px;
+    }
+    .projectTopTags {
+      margin-top: 25px;
+      font: 400 16px "Karla";
+      line-height: 24px;
+      width: 305px;
+    }
+    /*==============End-PROJECT-HEADER==============*/
+
+    /*==============BLOCK-1 (Large pic with description)==============*/
+    .projectBlock1 {
+      margin-top: 30px;
+    }
+    .projectBlock1Img {
+      height: 351px;
+    }
+    .projectBlock1Desc {
+      width: 360px;
+      padding-bottom: 40px;
+      margin-top: 50px;
+      font: 400 20px "Karla";
+      line-height: 30px;
+    }
+    /*==============End-BLOCK-1 (Large pic with description)==============*/
+
+    /*==============BLOCK-2 (Big pic with description and link)==============*/
+    .projectBlock2 {
+      margin-top: 30px;
+    }
+    .projectBlock2Img {
+      height: 273px;
+    }
+    .projectBlock2Wrap {
+      margin-top: 50px;
+      padding-bottom: 40px;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .projectBlock2WrapDesc {
+      width: 360px;
+      font: 400 20px "Karla";
+      line-height: 30px;
+    }
+    .projectBlock2WrapLinkToProject {
+      margin-top: 28px;
+    }
+    /*==============End-BLOCK-2 (Big pic with description and link)==============*/
+
+    /*==============BLOCK-3 (2 medium pics)==============*/
+    .projectBlock3 {
+      margin-top: 30px;
+    }
+    .projectBlock3Img {
+      width: 245px;
+      height: 149px;
+    }
+    /*==============End-BLOCK-3 (2 medium pics)==============*/
+
+    /*==============BLOCK-4 (Big text in 2 columns)==============*/
+    .projectBlock4 {
+      margin-top: 30px;
+      padding-bottom: 40px;
+    }
+    .projectBlock4Text {
+      width: 520px;
+      column-width: 245px;
+      column-gap: 30px;
+      font: 400 20px "Karla";
+      line-height: 30px;
+    }
+    /*==============End-BLOCK-4 (Big text in 2 columns)==============*/
+  }
+  /*================================End-Media--<1080px================================*/
+
+
+  /*================================Media--<600px================================*/
+  @media screen and (max-width:599px) {
+    /*==============PROJECT-HEADER==============*/
+    #projectTop {
+      margin: 65px 0 0;
+      padding-bottom: 30px;
+    }
+    .projectTopContainer {
+      width: 280px;
+      margin: 0 auto;
+    }
+    #projectTopTitle {
+      font: 700 28px "Nunito";
+    }
+    #projectTopDesc {
+      margin-top: 20px;
+      width: 280px;
+      font: 400 18px "Karla";
+      line-height: 27px;
+    }
+    .projectTopTags {
+      margin-top: 20px;
+      font: 400 14px "Karla";
+      line-height: 21px;
+      width: 280px;
+    }
+    /*==============End-PROJECT-HEADER==============*/
+
+    /*==============BLOCK-1 (Large pic with description)==============*/
+    .projectBlock1Img {
+      height: 187px;
+    }
+    .projectBlock1Desc {
+      width: 280px;
+      padding-bottom: 20px;
+      margin-top: 30px;
+      font: 400 18px "Karla";
+      line-height: 27px;
+    }
+    /*==============End-BLOCK-1 (Large pic with description)==============*/
+
+    /*==============BLOCK-2 (Big pic with description and link)==============*/
+    .projectBlock2Img {
+      height: 155px;
+    }
+    .projectBlock2Wrap {
+      margin-top: 30px;
+      padding-bottom: 20px;
+    }
+    .projectBlock2WrapDesc {
+      width: 280px;
+      font: 400 18px "Karla";
+      line-height: 27px;
+    }
+    .projectBlock2WrapLinkToProject {
+      margin-top: 30px;
+    }
+    /*==============End-BLOCK-2 (Big pic with description and link)==============*/
+
+    /*==============BLOCK-3 (2 medium pics)==============*/
+    .projectBlock3 {
+      margin-top: 30px;
+    }
+    .projectBlock3Img {
+      width: 130px;
+      height: 80px;
+    }
+    /*==============End-BLOCK-3 (2 medium pics)==============*/
+
+    /*==============BLOCK-4 (Big text in 2 columns)==============*/
+    .projectBlock4 {
+      margin-top: 30px;
+      padding-bottom: 20px;
+    }
+    .projectBlock4Text {
+      width: 280px;
+      column-count: 1;
+      column-width: 280px;
+      column-gap: 0px;
+      font: 400 18px "Karla";
+      line-height: 27px;
+    }
+    /*==============End-BLOCK-4 (Big text in 2 columns)==============*/
+  }
+/*================================End-Media--<600px================================*/
+
+
+/*---------========================================================END<-PROJECT-PAGE->END========================================================---------*/

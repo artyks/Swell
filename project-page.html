@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr">
+
+<head>
+  <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <![endif]-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project page</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,800,700i" rel="stylesheet">
+  <script src="js/main.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="projectPage">
+
+  <section id="bodySection" footerUnderPage="off">
+
+    <!--========HEADER========-->
+    <header>
+      <!--========mobileMenu========-->
+      <div class="mobileMenu" visibility="off">
+        <div class="mobileMenuContainer">
+          <div class="mobileMenuItem"><a class="js-scroll" href="#serv">Services</a></div>
+          <div class="mobileMenuItem"><a class="js-scroll" href="#clients">Work</a></div>
+          <div class="mobileMenuItem"><a class="js-scroll" href="#contacts">Contact</a></div>
+        </div>
+        <div class="mobileMenuFooter">
+          <ul class="mobileMenuContacts">
+            <li class="mobileMenuEmail"><a href="mailto:dylan@swellmadeit.com">dylan@swellmadeit.com</a></li>
+            <li class="mobileMenuphone"><a href="tel:+17572897174">(757) 289-7174</a></li>
+          </ul>
+          <div class="mobileMenuSocialsContainer">
+            <ul class="mobileMenuSocials">
+              <li class="mobileMenuSocialsItem"><a href="#">Facebook</a></li>
+              <li class="mobileMenuSocialsItem"><a href="#">Instagram</a></li>
+              <li class="mobileMenuSocialsItem"><a href="#">UpWork</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--========End-mobileMenu========-->
+      <div id="header" onMobileMenu="off">
+        <svg id="headerLogo" viewBox="0 0 103 31" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.96 40.36C10.8533 40.36 8.89333 40.12 7.08 39.64C5.26667 39.1333 3.78667 38.4267 2.64 37.52C2.24 37.2267 1.94667 36.92 1.76 36.6C1.6 36.2533 1.52 35.8267 1.52 35.32C1.52 34.6533 1.72 34.0667 2.12 33.56C2.54667 33.0533 3.02667 32.8 3.56 32.8C3.85333 32.8 4.13333 32.8533 4.4 32.96C4.69333 33.04 5.04 33.2 5.44 33.44C6.58667 34.16 7.74667 34.6933 8.92 35.04C10.0933 35.36 11.3867 35.52 12.8 35.52C14.56 35.52 15.9067 35.2267 16.84 34.64C17.7733 34.0533 18.24 33.2133 18.24 32.12C18.24 31.2933 17.8 30.6267 16.92 30.12C16.0667 29.6133 14.5333 29.1333 12.32 28.68C9.84 28.1733 7.85333 27.56 6.36 26.84C4.89333 26.12 3.81333 25.2267 3.12 24.16C2.45333 23.0933 2.12 21.8 2.12 20.28C2.12 18.6 2.6 17.0933 3.56 15.76C4.54667 14.4 5.89333 13.3467 7.6 12.6C9.33333 11.8267 11.28 11.44 13.44 11.44C17.2267 11.44 20.3467 12.3867 22.8 14.28C23.2 14.6 23.48 14.9333 23.64 15.28C23.8267 15.6 23.92 16 23.92 16.48C23.92 17.1467 23.7067 17.7333 23.28 18.24C22.88 18.7467 22.4133 19 21.88 19C21.5867 19 21.3067 18.96 21.04 18.88C20.8 18.8 20.4533 18.6267 20 18.36C18.9067 17.6667 17.8933 17.1467 16.96 16.8C16.0533 16.4533 14.8933 16.28 13.48 16.28C11.8533 16.28 10.5733 16.6 9.64 17.24C8.70667 17.8533 8.24 18.7067 8.24 19.8C8.24 20.44 8.41333 20.9733 8.76 21.4C9.13333 21.8 9.73333 22.16 10.56 22.48C11.4133 22.8 12.6133 23.1333 14.16 23.48C17.7867 24.28 20.3867 25.3067 21.96 26.56C23.56 27.8133 24.36 29.5333 24.36 31.72C24.36 33.4267 23.88 34.9333 22.92 36.24C21.9867 37.5467 20.6533 38.56 18.92 39.28C17.2133 40 15.2267 40.36 12.96 40.36ZM54.3841 21.72C54.6241 21.16 54.9574 20.7333 55.3841 20.44C55.8107 20.1467 56.2641 20 56.7441 20C57.4907 20 58.1574 20.2533 58.7441 20.76C59.3307 21.2667 59.6241 21.8933 59.6241 22.64C59.6241 22.96 59.5441 23.32 59.3841 23.72L52.8241 38.44C52.5841 39.0267 52.1974 39.48 51.6641 39.8C51.1307 40.0933 50.5707 40.24 49.9841 40.24C49.3707 40.24 48.7974 40.0933 48.2641 39.8C47.7574 39.48 47.3841 39.0267 47.1441 38.44L42.8641 28.48L38.7441 38.44C38.5041 39.0267 38.1307 39.48 37.6241 39.8C37.1174 40.0933 36.5441 40.24 35.9041 40.24C35.2907 40.24 34.7174 40.0933 34.1841 39.8C33.6507 39.48 33.2641 39.0267 33.0241 38.44L26.5041 23.72C26.3441 23.3467 26.2641 22.9867 26.2641 22.64C26.2641 21.8933 26.5707 21.2667 27.1841 20.76C27.8241 20.2533 28.5441 20 29.3441 20C29.8774 20 30.3574 20.1467 30.7841 20.44C31.2374 20.7333 31.5841 21.16 31.8241 21.72L36.1041 32.48L40.4641 21.8C40.7041 21.24 41.0507 20.8133 41.5041 20.52C41.9841 20.2 42.5041 20.04 43.0641 20.04C43.6241 20.04 44.1441 20.1867 44.6241 20.48C45.1041 20.7733 45.4641 21.2133 45.7041 21.8L50.1441 32.48L54.3841 21.72ZM77.8847 34.16C78.418 34.16 78.8447 34.3733 79.1647 34.8C79.5114 35.2267 79.6847 35.7733 79.6847 36.44C79.6847 36.8933 79.5514 37.32 79.2847 37.72C79.018 38.0933 78.6447 38.4133 78.1647 38.68C77.258 39.16 76.2047 39.56 75.0047 39.88C73.8047 40.1733 72.698 40.32 71.6847 40.32C69.5514 40.32 67.6847 39.9067 66.0847 39.08C64.5114 38.2533 63.298 37.08 62.4447 35.56C61.5914 34.0133 61.1647 32.2 61.1647 30.12C61.1647 28.12 61.578 26.3467 62.4047 24.8C63.2314 23.2533 64.378 22.0533 65.8447 21.2C67.3114 20.32 68.978 19.88 70.8447 19.88C72.6314 19.88 74.1914 20.28 75.5247 21.08C76.8847 21.8533 77.938 22.9733 78.6847 24.44C79.4314 25.88 79.8047 27.5733 79.8047 29.52C79.8047 30.1067 79.658 30.56 79.3647 30.88C79.098 31.1733 78.7114 31.32 78.2047 31.32H67.0047C67.1914 32.8933 67.6714 34.04 68.4447 34.76C69.218 35.4533 70.3247 35.8 71.7647 35.8C72.538 35.8 73.2314 35.7067 73.8447 35.52C74.458 35.3333 75.138 35.08 75.8847 34.76C76.258 34.6 76.618 34.4667 76.9647 34.36C77.3114 34.2267 77.618 34.16 77.8847 34.16ZM71.0047 24.04C69.858 24.04 68.938 24.4133 68.2447 25.16C67.5514 25.88 67.138 26.9333 67.0047 28.32H74.7247C74.6447 26.9067 74.2847 25.84 73.6447 25.12C73.0314 24.4 72.1514 24.04 71.0047 24.04ZM86.4928 40.24C85.6128 40.24 84.8795 40 84.2928 39.52C83.7328 39.04 83.4528 38.3333 83.4528 37.4V14.44C83.4528 13.5067 83.7328 12.8 84.2928 12.32C84.8795 11.84 85.6128 11.6 86.4928 11.6C87.3461 11.6 88.0528 11.84 88.6128 12.32C89.1995 12.8 89.4928 13.5067 89.4928 14.44V37.4C89.4928 38.3333 89.1995 39.04 88.6128 39.52C88.0528 40 87.3461 40.24 86.4928 40.24ZM97.1569 40.24C96.2769 40.24 95.5435 40 94.9569 39.52C94.3969 39.04 94.1169 38.3333 94.1169 37.4V14.44C94.1169 13.5067 94.3969 12.8 94.9569 12.32C95.5435 11.84 96.2769 11.6 97.1569 11.6C98.0102 11.6 98.7169 11.84 99.2769 12.32C99.8635 12.8 100.157 13.5067 100.157 14.44V37.4C100.157 38.3333 99.8635 39.04 99.2769 39.52C98.7169 40 98.0102 40.24 97.1569 40.24Z" transform="translate(-1 -11)" fill="white"/>
+        </svg>
+        <ul id="headerMenu">
+          <li class="menuItem"><a class="js-scroll js-btn1" href="#serv">Services</a></li>
+          <li class="menuItem"><a class="js-scroll" href="#clients">Work</a></li>
+          <li class="menuItem"><a class="js-scroll" href="#contacts">Contact</a></li>
+          <svg id="burgerLines" cross="off" width="22" height="19" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect id="burgerLine1" width="22" height="2.87879" rx="1.4394" fill="white"/>
+            <rect id="burgerLine2" width="22" height="2.87879" rx="1.4394" transform="translate(0 8.06055)" fill="white"/>
+            <rect id="burgerLine3" width="22" height="2.87879" rx="1.4394" transform="translate(0 16.1211)" fill="white"/>
+          </svg>
+        </ul>
+      </div>
+    </header>
+    <!--========END>HEADER<END========-->
+
+    <main id="main">
+      <!--========PROJECT-HEADER========-->
+      <div id="projectTop">
+        <div class="projectTopContainer">
+          <h1 id="projectTopTitle">University of Suffolk</h1>
+          <div id="projectTopDesc">Branding for The University of Suffolk, one of the newest universities in the UK. in a world that never stays the same.</div>
+          <div class="projectTopTags">Logo design, Branding, Website.</div>
+        </div>
+      </div>
+      <!--========END>PROJECT-HEADER========-->
+
+      <!--========BLOCK-1 (Large pic with description)========-->
+      <div class="projectBlock1">
+        <div class="projectBlock1Img"></div>
+        <div class="projectBlock1Desc">Only were commissioned to create a bold and progressive identity for the new University. The brand was to reference 'change'. </div>
+      </div>
+      <!--========END>BLOCK-1========-->
+
+      <!--========BLOCK-2 (Big pic with description and link)========-->
+      <div class="projectBlock2">
+        <div class="projectBlock2Img"></div>
+        <div class="projectBlock2Wrap">
+          <div class="projectBlock2WrapDesc">The brand was met with near universal acclaim from staff, students and faculty. Whilst it is too early to gauge the full impact of the rebrand on the future of the University, anecdotal evidence from recruitment fairs has been positive. </div>
+          <a href="#" class="projectBlock2WrapLinkToProject">Check out the website</a>
+        </div>
+      </div>
+      <!--========END>BLOCK-2========-->
+
+      <!--========BLOCK-3 (2 medium pics)========-->
+      <div class="projectBlock3">
+        <div class="projectBlock3Img"></div>
+        <div class="projectBlock3Img"></div>
+      </div>
+      <!--========END>BLOCK-3========-->
+
+      <!--========BLOCK-4 (Big text in 2 columns)========-->
+      <div class="projectBlock4">
+        <div class="projectBlock4Text">Following extensive consultation with stakeholders, our priority became crafting a bold, contemporary and flexible. Following extensive consultation with stakeholders, our priority became crafting a bold, contemporary and flexible.  Following extensive consultation with stakeholders, our priority became crafting a bold, contemporary and flexible system to extensive consultation with stakeholders, our priority became crafting a bold, contemporary and flexible system to.</div>
+      </div>
+      <!--========END>BLOCK-4========-->
+
+      <!--========CTAbutton========-->
+      <div id="CTA" CTAbutton="on">
+        <div class="CTAcontainer">
+          <div class="CTAtext">Like what we do? Estimate your project!</div>
+          <button class="CTAbutton">Estimate</button>
+        </div>
+      </div>
+      <!--========END>CTAbutton========-->
+
+      <!--========OTHER-WORKS========-->
+      <div id="works">
+        <h2 class="blockTopHeader">Other projects</h2>
+        <p class="blockTopDesc">And this is how Swell made it:</p>
+        <div class="worksContainer">
+          <div class="worksContainerWrap">
+            <a href="#">
+              <div class="worksWrapImg worksWrapImg1"></div>
+            </a>
+            <div class="worksWrapDesc">
+              <h3><a href="#">Mathias Dahlgren</a></h3>
+              <p><a href="#">Award winning minimalism at its best</a></p>
+            </div>
+          </div>
+          <div class="worksContainerWrap">
+            <a href="#">
+              <div class="worksWrapImg worksWrapImg2"></div>
+            </a>
+            <div class="worksWrapDesc">
+              <h3><a href="#">Mathias Dahlgren</a></h3>
+              <p><a href="#">Award winning minimalism at its best</a></p>
+            </div>
+          </div>
+          <div class="worksContainerWrap">
+            <a href="#">
+              <div class="worksWrapImg worksWrapImg3"></div>
+            </a>
+            <div class="worksWrapDesc">
+              <h3><a href="#">Mathias Dahlgren</a></h3>
+              <p><a href="#">Award winning minimalism at its best</a></p>
+            </div>
+          </div>
+          <div class="worksContainerWrap">
+            <a href="#">
+              <div class="worksWrapImg worksWrapImg4"></div>
+            </a>
+            <div class="worksWrapDesc">
+              <h3><a href="#">Mathias Dahlgren</a></h3>
+              <p><a href="#">Award winning minimalism at its best</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="worksLoadMore">
+          <a href="#">
+            <div id="worksLoadMoreButton">Load more</div>
+          </a>
+        </div>
+      </div>
+      <!--========END>OTHER-WORKS========-->
+
+      <!--========CONTACTS========-->
+      <div id="contacts">
+        <h2 class="blockTopHeader">Let's connect</h2>
+        <p class="blockTopDesc contactsTopDesc">Just fill the form and we'll get back to you ASAP.</p>
+        <div class="contactsWrap contactsWrapForm">
+          <p class="contactsWrapTitle">Fill the form:</p>
+          <div class="contactsFormContainer">
+            <form id="contactsForm" action="contact.php" method="post" onsubmit='return copyContent()'>
+              <div class="contactsFormWrap">
+                <div class="contactsInputLabel">Name :</div>
+                <input class="contactsInput" type="text" name="cf_name" placeholder="Hardy Ackerman">
+              </div>
+              <div class="contactsFormWrap">
+                <div class="contactsInputLabel">Company :</div>
+                <input class="contactsInput" type="text" name="cf_company" placeholder="Nike">
+              </div>
+              <div class="contactsFormWrap">
+                <div class="contactsInputLabel">E-mail :</div>
+                <input class="contactsInput" type="text" name="cf_email" placeholder="hardy.a@nike.com">
+              </div>
+              <div class="contactsFormWrap">
+                <div class="contactsInputLabel">Message :</div>
+                <div class="contactsInput contactsTextArea" placeholder="Write your message here" contenteditable="true"></div>
+                <textarea class="contactsHiddenTextArea" name="cf_message"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="contactsFormButtonContainer">
+            <button id="contactsFormButton" type="submit" form="contactsForm">Contact</button>
+          </div>
+        </div>
+      </div>
+      <!--========END>CONTACTS========-->
+
+    </main>
+
+    <!--========SideElements========-->
+    <ul id="leftSideSocials">
+      <li class="sideSocialsItem"><a href="#">Facebook</a></li>
+      <li class="sideSocialsItem"><a href="#">Instagram</a></li>
+      <li class="sideSocialsItem"><a href="#">UpWork</a></li>
+    </ul>
+    <ul id="rightSideSocials">
+      <li class="sideSocialsItem"><a href="mailto:dylan@swellmadeit.com">dylan@swellmadeit.com</a></li>
+      <li class="sideSocialsItem"><a href="tel:+17572897174">(757) 289-7174</a></li>
+    </ul>
+
+    <ul id="leftSideSocialsFixed">
+      <li class="sideSocialsItem"><a href="#">Facebook</a></li>
+      <li class="sideSocialsItem"><a href="#">Instagram</a></li>
+      <li class="sideSocialsItem"><a href="#">UpWork</a></li>
+    </ul>
+    <ul id="rightSideSocialsFixed">
+      <li class="sideSocialsItem"><a href="mailto:dylan@swellmadeit.com">dylan@swellmadeit.com</a></li>
+      <li class="sideSocialsItem"><a href="tel:+17572897174">(757) 289-7174</a></li>
+    </ul>
+    <!--========END>SideElements========-->
+
+    <!--========CTAform========-->
+    <div id="CTAformContainerOuterWrap" class="CTAformContainerOuterWrap" visibility="off">
+      <div class="CTAformContainerWrap">
+        <div id="CTAformContainer" class="CTAformContainer">
+
+          <div class="CTAformHeader">
+            <svg class="CTAformHeaderLogo" viewBox="0 0 103 31" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.96 40.36C10.8533 40.36 8.89333 40.12 7.08 39.64C5.26667 39.1333 3.78667 38.4267 2.64 37.52C2.24 37.2267 1.94667 36.92 1.76 36.6C1.6 36.2533 1.52 35.8267 1.52 35.32C1.52 34.6533 1.72 34.0667 2.12 33.56C2.54667 33.0533 3.02667 32.8 3.56 32.8C3.85333 32.8 4.13333 32.8533 4.4 32.96C4.69333 33.04 5.04 33.2 5.44 33.44C6.58667 34.16 7.74667 34.6933 8.92 35.04C10.0933 35.36 11.3867 35.52 12.8 35.52C14.56 35.52 15.9067 35.2267 16.84 34.64C17.7733 34.0533 18.24 33.2133 18.24 32.12C18.24 31.2933 17.8 30.6267 16.92 30.12C16.0667 29.6133 14.5333 29.1333 12.32 28.68C9.84 28.1733 7.85333 27.56 6.36 26.84C4.89333 26.12 3.81333 25.2267 3.12 24.16C2.45333 23.0933 2.12 21.8 2.12 20.28C2.12 18.6 2.6 17.0933 3.56 15.76C4.54667 14.4 5.89333 13.3467 7.6 12.6C9.33333 11.8267 11.28 11.44 13.44 11.44C17.2267 11.44 20.3467 12.3867 22.8 14.28C23.2 14.6 23.48 14.9333 23.64 15.28C23.8267 15.6 23.92 16 23.92 16.48C23.92 17.1467 23.7067 17.7333 23.28 18.24C22.88 18.7467 22.4133 19 21.88 19C21.5867 19 21.3067 18.96 21.04 18.88C20.8 18.8 20.4533 18.6267 20 18.36C18.9067 17.6667 17.8933 17.1467 16.96 16.8C16.0533 16.4533 14.8933 16.28 13.48 16.28C11.8533 16.28 10.5733 16.6 9.64 17.24C8.70667 17.8533 8.24 18.7067 8.24 19.8C8.24 20.44 8.41333 20.9733 8.76 21.4C9.13333 21.8 9.73333 22.16 10.56 22.48C11.4133 22.8 12.6133 23.1333 14.16 23.48C17.7867 24.28 20.3867 25.3067 21.96 26.56C23.56 27.8133 24.36 29.5333 24.36 31.72C24.36 33.4267 23.88 34.9333 22.92 36.24C21.9867 37.5467 20.6533 38.56 18.92 39.28C17.2133 40 15.2267 40.36 12.96 40.36ZM54.3841 21.72C54.6241 21.16 54.9574 20.7333 55.3841 20.44C55.8107 20.1467 56.2641 20 56.7441 20C57.4907 20 58.1574 20.2533 58.7441 20.76C59.3307 21.2667 59.6241 21.8933 59.6241 22.64C59.6241 22.96 59.5441 23.32 59.3841 23.72L52.8241 38.44C52.5841 39.0267 52.1974 39.48 51.6641 39.8C51.1307 40.0933 50.5707 40.24 49.9841 40.24C49.3707 40.24 48.7974 40.0933 48.2641 39.8C47.7574 39.48 47.3841 39.0267 47.1441 38.44L42.8641 28.48L38.7441 38.44C38.5041 39.0267 38.1307 39.48 37.6241 39.8C37.1174 40.0933 36.5441 40.24 35.9041 40.24C35.2907 40.24 34.7174 40.0933 34.1841 39.8C33.6507 39.48 33.2641 39.0267 33.0241 38.44L26.5041 23.72C26.3441 23.3467 26.2641 22.9867 26.2641 22.64C26.2641 21.8933 26.5707 21.2667 27.1841 20.76C27.8241 20.2533 28.5441 20 29.3441 20C29.8774 20 30.3574 20.1467 30.7841 20.44C31.2374 20.7333 31.5841 21.16 31.8241 21.72L36.1041 32.48L40.4641 21.8C40.7041 21.24 41.0507 20.8133 41.5041 20.52C41.9841 20.2 42.5041 20.04 43.0641 20.04C43.6241 20.04 44.1441 20.1867 44.6241 20.48C45.1041 20.7733 45.4641 21.2133 45.7041 21.8L50.1441 32.48L54.3841 21.72ZM77.8847 34.16C78.418 34.16 78.8447 34.3733 79.1647 34.8C79.5114 35.2267 79.6847 35.7733 79.6847 36.44C79.6847 36.8933 79.5514 37.32 79.2847 37.72C79.018 38.0933 78.6447 38.4133 78.1647 38.68C77.258 39.16 76.2047 39.56 75.0047 39.88C73.8047 40.1733 72.698 40.32 71.6847 40.32C69.5514 40.32 67.6847 39.9067 66.0847 39.08C64.5114 38.2533 63.298 37.08 62.4447 35.56C61.5914 34.0133 61.1647 32.2 61.1647 30.12C61.1647 28.12 61.578 26.3467 62.4047 24.8C63.2314 23.2533 64.378 22.0533 65.8447 21.2C67.3114 20.32 68.978 19.88 70.8447 19.88C72.6314 19.88 74.1914 20.28 75.5247 21.08C76.8847 21.8533 77.938 22.9733 78.6847 24.44C79.4314 25.88 79.8047 27.5733 79.8047 29.52C79.8047 30.1067 79.658 30.56 79.3647 30.88C79.098 31.1733 78.7114 31.32 78.2047 31.32H67.0047C67.1914 32.8933 67.6714 34.04 68.4447 34.76C69.218 35.4533 70.3247 35.8 71.7647 35.8C72.538 35.8 73.2314 35.7067 73.8447 35.52C74.458 35.3333 75.138 35.08 75.8847 34.76C76.258 34.6 76.618 34.4667 76.9647 34.36C77.3114 34.2267 77.618 34.16 77.8847 34.16ZM71.0047 24.04C69.858 24.04 68.938 24.4133 68.2447 25.16C67.5514 25.88 67.138 26.9333 67.0047 28.32H74.7247C74.6447 26.9067 74.2847 25.84 73.6447 25.12C73.0314 24.4 72.1514 24.04 71.0047 24.04ZM86.4928 40.24C85.6128 40.24 84.8795 40 84.2928 39.52C83.7328 39.04 83.4528 38.3333 83.4528 37.4V14.44C83.4528 13.5067 83.7328 12.8 84.2928 12.32C84.8795 11.84 85.6128 11.6 86.4928 11.6C87.3461 11.6 88.0528 11.84 88.6128 12.32C89.1995 12.8 89.4928 13.5067 89.4928 14.44V37.4C89.4928 38.3333 89.1995 39.04 88.6128 39.52C88.0528 40 87.3461 40.24 86.4928 40.24ZM97.1569 40.24C96.2769 40.24 95.5435 40 94.9569 39.52C94.3969 39.04 94.1169 38.3333 94.1169 37.4V14.44C94.1169 13.5067 94.3969 12.8 94.9569 12.32C95.5435 11.84 96.2769 11.6 97.1569 11.6C98.0102 11.6 98.7169 11.84 99.2769 12.32C99.8635 12.8 100.157 13.5067 100.157 14.44V37.4C100.157 38.3333 99.8635 39.04 99.2769 39.52C98.7169 40 98.0102 40.24 97.1569 40.24Z" transform="translate(-1 -11)" fill="#000"/>
+            </svg>
+            <svg id="CTAformHeaderCross" class="CTAformHeaderCross" width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="29.5926" height="2.88" rx="1.44" transform="translate(0 20.8711) scale(1.00254 0.99745) rotate(-45)" fill="black"/>
+              <rect width="29.5926" height="2.88" rx="1.44" transform="translate(2.04102) scale(1.00254 0.99745) rotate(45)" fill="black"/>
+            </svg>
+          </div>
+
+          <div class="CTAformInnerContainer">
+            <h2 class="blockTopHeader CTAformTopHeader">Fill the form</h2>
+            <p class="blockTopDesc CTAformTopDesc">To estimate your project</p>
+
+            <form id="CTAform" class="CTAform" action="contact.php" method="post" onsubmit='return copyContent()'>
+
+              <div class="CTAformOuterWrap">
+                <div class="CTAFormWrap">
+                  <div class="CTAFormInputLabel">Name :</div>
+                  <input class="CTAFormInput" type="text" name="cf_name" placeholder="Hardy Ackerman">
+                </div>
+                <div class="CTAFormWrap">
+                  <div class="CTAFormInputLabel">Company :</div>
+                  <input class="CTAFormInput" type="text" name="cf_company" placeholder="Nike">
+                </div>
+                <div class="CTAFormWrap">
+                  <div class="CTAFormInputLabel">E-mail :</div>
+                  <input class="CTAFormInput" type="text" name="cf_email" placeholder="hardy.a@nike.com">
+                </div>
+                <div class="CTAFormWrap">
+                  <div class="CTAFormInputLabel">Phone :</div>
+                  <input class="CTAFormInput" type="text" name="cf_phone" placeholder="+1 (757) 289-7174">
+                </div>
+              </div>
+
+              <div class="CTAFormWrap">
+                <div class="CTAFormInputLabel">Message :</div>
+                <div id="CTAFormTextArea" class="CTAFormInput CTAFormTextArea" placeholder="Write your message here" contenteditable="true"></div>
+                <textarea id="CTAHiddenTextArea" class="CTAFormHiddenTextArea" name="cf_message"></textarea>
+              </div>
+              <div class="CTAFormButtonContainer">
+                <button id="CTAFormButton" class="CTAFormButton" type="submit" form="footerCTAform">Estimate</button>
+              </div>
+            </form>
+
+            <p class="CTAformFooterTextMobile">We will get back in 3 hours with all the details</p>
+            <div class="CTAFormContactMobileContainer">
+              <div class="CTAFormLeftContactMobile"><a href="mailto:dylan@swellmadeit.com">dylan@swellmadeit.com</a></div>
+              <div class="CTAFormRightContactMobile"><a href="tel:+17572897174">+1 (757) 289-7174</a></div>
+            </div>
+          </div>
+
+        </div>
+        <p class="CTAformFooterText">We will get back in 3 hours with all the details</p>
+        <div class="CTAFormLeftContact"><a href="mailto:dylan@swellmadeit.com">dylan@swellmadeit.com</a></div>
+        <div class="CTAFormRightContact"><a href="tel:+17572897174">+1 (757) 289-7174</a></div>
+      </div>
+    </div>
+    <!--========END>CTAform========-->
+
+
+    <!--========Footer========-->
+    <footer id="theFooter" CTAbutton="off" footerUnderPage="off">
+      <div class="footerCTAcontainer">
+        <div class="footerCTAtext">Estimate your project:</div>
+        <button id="footerCTAbutton">Estimate</button>
+      </div>
+      <div id="footer">
+        <div class="copyrights">© Swell Interactive.</div>
+        <div class="footerSocialsContainer">
+          <ul id="footerSocials">
+            <li class="socialsItem"><a href="#">Facebook</a></li>
+            <li class="socialsItem"><a href="#">Instagram</a></li>
+            <li class="socialsItem"><a href="#">UpWork</a></li>
+          </ul>
+        </div>
+        <div class="footerMenuContainer">
+          <ul id="footerMenu">
+            <li class="footerMenuItem"><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!--========END>Footer========-->
+
+
+  </section>
+</body>
+
+</html>
